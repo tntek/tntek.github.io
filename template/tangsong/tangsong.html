@@ -1,0 +1,756 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <!-- 必须的 meta 标签 -->
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+
+    <!-- Bootstrap 的 CSS 文件 -->
+    <link rel="stylesheet" href="https://cdn.staticfile.org/twitter-bootstrap/4.3.1/css/bootstrap.min.css" />
+
+    <!-- <link rel="stylesheet" href="css/main.css"> -->
+    <!-- <link rel="stylesheet" href="css/css.css"> -->
+
+    <title>Song Tang</title>
+
+    <style>
+        body {
+            position: relative;
+            font-family: Georgia, 'Times New Roman', Times, serif;
+        }
+
+        .nav-link.active {
+            text-decoration: underline;
+        }
+
+        .subtitle {
+            color: #998d71;
+            font-size: 24px;
+            font-weight: 500;
+            margin-bottom: 5%;
+            padding-top: 5%;
+        }
+
+        .subtitle span {
+            border-color: #998d71;
+            border-bottom: solid;
+            border-bottom-width: 3px;
+            padding-bottom: 20px;
+        }
+
+        .text-p {
+            margin-top: auto;
+        }
+
+        .subcontent {
+            /* margin-bottom: 8%; */
+            margin: auto;
+            padding-bottom: 1%;
+        }
+
+        #head {
+            margin: 0px;
+            height: 550px;
+
+            /* filter: blur(4px); */
+        }
+
+        .bg {
+            background: url('./photos/bg.jpg');
+            height: 550px;
+            text-align: center;
+            line-height: 550px;
+            position: absolute;
+            z-index: -1;
+        }
+
+        .bg-blur {
+            float: left;
+            width: 100%;
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: cover;
+            -webkit-filter: blur(4px);
+            -moz-filter: blur(4px);
+            -o-filter: blur(4px);
+            -ms-filter: blur(4px);
+            filter: blur(4px);
+        }
+
+        .nav-border {
+            border-top: white solid;
+            border-bottom: white solid 1px;
+            font-weight: 500;
+        }
+
+
+        nav .active {
+            text-decoration: underline;
+            text-decoration-color: white;
+        }
+
+        .cursive {
+            font-family: "Gabriola", "Harrington", "Lucida Calligraphy", "sans-serif";
+        }
+
+        ol {
+            margin-bottom: 3%;
+        }
+
+        a {
+            color: #5c83bc;
+        }
+
+        .num-large {
+            font-size: 30px;
+            font-family: 'Harrington', Courier, monospace;
+        }
+
+        .row.item-start {
+            margin: 0px 0px 0px 0px;
+        }
+
+        .row.item-content {
+            margin: 0px 0px 0px 15px;
+
+        }
+
+        .row.item-end {
+            margin: 0px 0px 0px 15px;
+        }
+
+        .col.item-start {
+            padding: 0px 0px 0px 0px;
+        }
+
+        .col.item-content {
+            padding: 0px 0px 0px 15px;
+        }
+
+        .col.item-end {
+            padding: 0px 0px 0px 15px;
+        }
+        #STUDENTS img{
+            height: 150px;
+            width: 150px;
+        }
+    </style>
+</head>
+
+<body data-spy="scroll" data-target=".navbar" data-offset="50">
+
+    <!-- JavaScript 文件是可选的。从以下两种建议中选择一个即可！ -->
+
+    <!-- 选项 1：jQuery 和 Bootstrap 集成包（集成了 Popper） -->
+
+    <script src="https://cdn.staticfile.org/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://cdn.staticfile.org/popper.js/1.15.0/umd/popper.min.js"></script>
+    <script src="https://cdn.staticfile.org/twitter-bootstrap/4.3.1/js/bootstrap.min.js"></script>
+
+    <!-- 选项 2：Popper 和 Bootstrap 的 JS 插件各自独立 -->
+    <!--
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.min.js" integrity="sha384-Lge2E2XotzMiwH69/MXB72yLpwyENMiOKX8zS8Qo7LDCvaBIWGL+GlRQEKIpYR04" crossorigin="anonymous"></script>
+    -->
+
+    <nav class="navbar navbar-expand-sm bg-dark navbar-dark fixed-top justify-content-sm-center d-none">
+        <ul class="navbar-nav">
+            <li class="nav-item">
+                <a class="nav-link" href="#BIO">BIO</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#PUBLICATIONS">PUBLICATIONS</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#STUDENTS">STUDENTS</a>
+            </li>
+            <li class="nav-item ">
+                <a class="nav-link" href="#TEACHING">TEACHING</a>
+            </li>
+            <li class="nav-item ">
+                <a class="nav-link" href="#SERVICES">SERVICES</a>
+            </li>
+            <li class="nav-item ">
+                <a class="nav-link" href="#MISC">MISC</a>
+            </li>
+            <li class="nav-item ">
+                <a class="nav-link" href="#CONTACT">CONTACT</a>
+            </li>
+        </ul>
+    </nav>
+    <div id="head">
+        <div class="bg bg-blur">
+            <!-- <img src="./photos/bg.jpg"> -->
+        </div>
+        <div class="container" style="padding-top: 5%;">
+            <div class="text-center ">
+                <div class="">
+                    <img decoding="async" src="./photos/tangsong.png" alt="" class="rounded-circle"
+                        style="height: 170px;width: 170px;">
+                    <span
+                        style="color: white;font-size: 50px;margin-left: 5%;display: inline-block; height: 170px;line-height: 170px;">Song
+                        Tang (唐宋)</span>
+                </div>
+
+            </div>
+            <div style="padding-top: 8%;">
+
+                <nav class="navbar navbar-expand-sm navbar-dark justify-content-sm-center ">
+                    
+                    <ul class="navbar-nav nav-border">
+                        <li class="nav-item active">
+                            <a class="nav-link" href="#BIO">BIO</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#PUBLICATIONS">PUBLICATIONS</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#STUDENTS">STUDENTS</a>
+                        </li>
+                        <li class="nav-item ">
+                            <a class="nav-link" href="#TEACHING">TEACHING</a>
+                        </li>
+                        <li class="nav-item ">
+                            <a class="nav-link" href="#SERVICES">SERVICES</a>
+                        </li>
+                        <li class="nav-item ">
+                            <a class="nav-link" href="#MISC">MISC</a>
+                        </li>
+                        <li class="nav-item ">
+                            <a class="nav-link" href="#CONTACT">CONTACT</a>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+
+
+
+
+    </div>
+
+    <div class="">
+        <div class="">
+            <div id="BIO" class="container-fluid bg-light subcontent">
+                <div class="container">
+                    <div class="subtitle"><span>BIO</span></div>
+                    <h3>
+                        <p class="font-italic cursive text-uppercase ">EDUCATION</p>
+
+                    </h3>
+                    <p class="text-p">
+                    <ol>
+                        <li>
+                            <p>Ph.D., Computer Science, <a href="https://www.uestc.edu.cn/">University of Electronic
+                                    Science and Technology of China (UESTC)</a>, 06.2017</p>
+                        </li>
+                        <li>
+                            <p>M.S., System Engineering, <a href="https://www.cqupt.edu.cn/">Chongqing University of
+                                    Posts and Telecommunications (CQUPT)</a>, 06.2013</p>
+                        </li>
+                        <li>
+                            <p>B.S., Electronics Engineering, <a href="https://www.hainanu.edu.cn/">Hainan
+                                    University</a>, 06.2005</p>
+                        </li>
+                    </ol>
+                    </p>
+                    <h3>
+                        <p class="font-italic cursive text-uppercase">WORK EXPERIENCE</p>
+
+                    </h3>
+                    <p class="text-p">
+                    <ol>
+                        <li>
+                            <p>Associate Professor, Institute of Machine Intelligence, <a
+                                    href="https://en.usst.edu.cn/">University of Shanghai for
+                                    Science and Technology</a>, 12.2019-Present</p>
+                        </li>
+                        <li>
+                            <p>Assistant Researcher, Department of Informatics, <a href="https://www.uni-hamburg.de/">
+                                    Hamburg University (UHH)</a>,
+                                06.2017-12.2019</p>
+                        </li>
+                        <li>
+                            <p>Software Engineer, The 30th Research Institute of China Electronics Technology Group
+                                Corporation, 09.2009-09.2010</p>
+                        </li>
+                        <li>
+                            <p>Electronic Engineer, Shanghai Mitsubishi Elevator Co., Ltd, 07.2005-09.2009</p>
+                        </li>
+                    </ol>
+                    </p>
+                    <h3>
+                        <p class="font-italic cursive text-uppercase">RESERACH EXPERIENCE</p>
+
+                    </h3>
+                    <p class="text-p">
+                    <ol>
+                        <li>
+                            <p>Assistant Researcher at UHH, 07.2017-12.2019</p>
+                        </li>
+                        <ul>
+                            <li>
+                                <p>Dynamical neural network-based multi-modal fusion for intelligent robot.</p>
+                            </li>
+                        </ul>
+                        <li>
+                            <p>During working toward the Ph.D. degree at UESTC, 09.2013-06.2017</p>
+                        </li>
+                        <ul>
+                            <li>
+                                <p>Domain adaptation of object recognition and detection</p>
+                            </li>
+                        </ul>
+                        <li>
+                            <p>During working toward the M.S. degree at CQUPT, 09.2010-06.2013</p>
+                        </li>
+                        <ul>
+                            <li>
+                                <p>Gait of biped walk robot</p>
+                            </li>
+                            <li>
+                                <p>Hyperchaotic invariant sets</p>
+                            </li>
+                        </ul>
+                    </ol>
+                    </p>
+                    <h3>
+                        <p class="font-italic cursive text-uppercase">RESERACH PROJECT</p>
+
+                    </h3>
+                    <p class="text-p">
+                    <ol>
+                        <li>
+                            <p>Crossmodal Learning under contract Sonderforschungsbereich Transregio 169, German
+                                Research Foundation, main investigator</p>
+                        </li>
+                        <li>
+                            <p>STEP2DYNA, Horizon2020 RISE, main investigator</p>
+                        </li>
+                        <li>
+                            <p>An unsupervised domain adaptive object detection method for service robots, National
+                                Natural Science Foundation of China (61773093), main investigator</p>
+                        </li>
+                        <li>
+                            <p>The attractors coexistence and collective complexbehavior in memristive neural network,
+                                National Natural Science Foundation of China (61501073), main investigator</p>
+                        </li>
+                    </ol>
+                    </p>
+
+                </div>
+
+            </div>
+            <div id="PUBLICATIONS" class="container-fluid subcontent">
+                <div class="container">
+                    <div class="subtitle text-uppercase"><span>PUBLICATIONS</span></div>
+                    <p><b>Note</b>: * indicates the corresponding author.</p>
+                    <p><a href="https://scholar.google.com.hk/citations?hl=zh-CN&user=8uhkD9QAAAAJ">Full list of
+                            publications in Google Scholar</a>.</p>
+                    <h3>
+                        <p class="font-italic cursive num-large ">2023</p>
+                    </h3>
+                    <p class="text-p">
+                    <ol>
+                        <li>
+                            <p>J. Mi, <b>S. Tang</b>, Z. Ma, D. Liu and J. Zhang, "Weakly supervised referring
+                                expression grounding via target-guided knowledge distillation", <i>IEEE International
+                                    Conference on Robotics and Automation (ICRA)</i>, June. 2023.</p>
+                        </li>
+                        <li>
+                            <p><b>S. Tang</b>, W. Su, Y. Yang, L. Chen* and M. Ye, "Model adaptation via credible local
+                                context representation", <i>CAAI Transactions on Intelligence Technology</i>, May. 2023.
+                                (IF = 7.985) [<a href="pub/CLCR.pdf">pdf</a>][<a
+                                    href="https://github.com/tntek/CLCR">code</a>]</p>
+                        </li>
+                     
+                    </ol>
+                    </p>
+                    <h3>
+                        <p class="font-italic cursive num-large ">2022</p>
+                    </h3>
+                    <p class="text-p">
+                        <ol>
+                          
+                           
+                            <li>
+                                <p><b>S. Tang</b>, Y. Zou, Z. Song, J. Lyu, L. Chen*, M. Ye, S. Zhong, J. Zhang, "Semantic
+                                    consistency learning on manifold for source data-free unsupervised domain adaptation",
+                                    <i>Neural Networks</i>, May. 2022, 152, pp. 467-478. (IF = 9.657) [<a
+                                        href="pub/SCLM.pdf">pdf</a>][<a href="https://github.com/tntek/SCLM">code</a>]
+                                </p>
+                            </li>
+                            <li>
+                                <p>X. Pan, J. Wang, Z. Deng, Y. Shuai, W. Luo, W. Luo, Q. Xie, Y. Xiao, <b>S. Tang</b>, S.
+                                    Jiang, C. Wu, F. Zhu, J. Zhang, W. Zhang, "A memristor-based bioinspired multimodal
+                                    sensory memory system for sensory adaptation of robots", <i>Advanced Intelligent
+                                        Systems</i>, July. 2022, 4(7), pp. 2200031. (IF = 7.298) [<a
+                                        href="pub/MEM.pdf">pdf</a>]</p>
+                            </li>
+                           
+                        </ol>
+                    </p>
+                    <h3>
+                        <p class="font-italic cursive num-large ">2021</p>
+                    </h3>
+                    <p class="text-p">
+                    <ol>
+                        
+                        <li>
+                            <p><b>S. Tang</b>, Y. Shi, Z. Ma, J. Li, J. Lyu, Q. Li*, J Zhang, "Model Adaptation through
+                                Hypothesis Transfer with Gradual Knowledge Distillation", <i>IEEE/RSJ International
+                                    Conference on Intelligent Robots and Systems (IROS)</i>, Aug. 2021, pp. 5679-5685
+                                [<a href="pub/GKD.pdf">pdf</a>][<a href="https://github.com/tntek/GKD">code</a>]</p>
+                        </li>
+                        
+                    </ol>
+                    </p>
+                    <h3>
+                        <p class="font-italic cursive num-large ">2020</p>
+                    </h3>
+                    <p class="text-p">
+                    <ol>
+                        
+                        <li>
+                            <p>J. Mi, J. Lyu, <b>S. Tang</b>*, Q. Li, J. Zhang, "Interactive Natural Language Grounding
+                                via Referring Expression Comprehension and Scene Graph Parsing", <i>Frontiers in
+                                    Neurorobotics</i>, 2020, 14, DOI:10.3389/fnbot.2020.00043. (IF = 3.493) [<a
+                                    href="pub/RECSGP.pdf">pdf</a>]</p>
+                        </li>
+                        <li>
+                            <p>J. Mi, H. Liang, N. Katsakis, <b>S. Tang</b>*, Q. Li, C. Zhang, J. Zhang,
+                                "Intention-Related Natural Language Grounding via Object Affordance Detection and
+                                Intention Semantic Extraction", <i>Frontiers in Neurorobotics</i>, Nov. 2020, 14,
+                                DOI:10.3389/fnbot.2020.00026. (IF = 3.493) [<a href="pub/OADISE.pdf">pdf</a>]</p>
+                        </li>
+                        
+                    </ol>
+                    </p>
+                    <h3>
+                        <p class="font-italic cursive num-large ">2019</p>
+                    </h3>
+                    <p class="text-p">
+                    <ol>
+                       
+                        <li>
+                            <p>L. Chen, <b>S. Tang</b>, F. Yang, S. Zhong, "Co-Existing of Multi-Attractor and Chaotic
+                                Transition in a Strong Hyperchaotic System", <i>IEEE International Computer Conference
+                                    on Wavelet Active Media Technology and Information Processing</i>, Oct. 2019, pp.
+                                49-54. [<a href="pub/CoExist.pdf">pdf</a>]</p>
+                        </li>
+                        <li>
+                            <p>H. Liang, X. Ma, S. Li, M. Görner, <b>S. Tang</b>, B. Fang, F. Sun, J. Zhang,
+                                "Pointnetgpd: Detecting grasp configurations from point sets", <i>International
+                                    Conference on Robotics and Automation (ICRA)</i>, 2019, pp. 3629-3635. [<a
+                                    href="pub/Pointnetgpd.pdf">pdf</a>]</p>
+                        </li>
+                        <li>
+                            <p>J. Mi, <b>S. Tang</b>, Z. Deng, M. Goerner, J. Zhang, "Object affordance based multimodal
+                                fusion for natural human-robot interaction", <i>Cognitive Systems Research</i>, Sep.
+                                2019, 54, pp. 128-137. (IF = 4.541) [<a href="pub/OAMF.pdf">pdf</a>]</p>
+                        </li>
+                        <li>
+                            <p><b>S. Tang</b>, Y. Ji*, J. Lyu, J. Mi, Q. Li, J. Zhang, "Visual Domain Adaptation
+                                Exploiting Confidence-Samples", <i>IEEE/RSJ International Conference on Intelligent
+                                    Robots and Systems (IROS)</i>, 2019, pp. 1173-1179. [<a href="pub/DACS.pdf">pdf</a>]
+                            </p>
+                        </li>
+                        <li>
+                            <p><b>S. Tang</b>, M. Ye*, P. Xu, X. Li, "Adaptive pedestrian detection by predicting
+                                classifier", <i>Neural Computing and Applications</i>, Apr. 2019, 31 (4), 1189-1200. (IF
+                                = 5.102) [<a href="pub/PDPC.pdf">pdf</a>]</p>
+                        </li>
+                    </ol>
+                    </p>
+
+                </div>
+
+            </div>
+        </div>
+        <div id="STUDENTS" class="container-fluid bg-light subcontent">
+            <div class="container">
+                <div class="subtitle"><span>STUDENTS</span></div>
+                <p class="text-p">
+                    Try to scroll this section and look at the navigation bar while
+                    scrolling! Try to scroll this section and look at the navigation bar
+                    while scrolling!  Try to scroll this section and look at the navigation bar while
+                    scrolling! Try to scroll this section and look at the navigation bar
+                    while scrolling!
+                </p>
+                <p class="text-p">
+                    Try to scroll this section and look at the navigation bar while
+                    scrolling! Try to scroll this section and look at the navigation bar
+                    while scrolling!  Try to scroll this section and look at the navigation bar while
+                    scrolling! Try to scroll this section and look at the navigation bar
+                    while scrolling!
+                </p>
+
+                <div class="row">
+                    <div class="col item-start">
+                        <div class="row justify-content-center item-start">
+                            <img src="../../photos/cartoon/avatar1.a3e2fd8c.jpg" alt="" class="rounded-circle">
+                        </div>
+                        <div class="row justify-content-center item-start">
+                            <p>
+                                <a href="">tangs@usst.edu.cn</a>
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="col item-content">
+                        <div class="row justify-content-center item-content">
+                            <img src="../../photos/cartoon/avatar2.df9549ec.jpg" alt="" class="rounded-circle">
+                        </div>
+                        <div class="row justify-content-center item-content">
+                            <p>
+                                <a href="">Linkedin</a>
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="col item-content">
+                        <div class="row justify-content-center item-content">
+                            <img src="../../photos/cartoon/avatar3.47cbbcc4.jpg" alt="" class="rounded-circle">
+                        </div>
+                        <div class="row justify-content-center item-content">
+                            <p>
+                                <a href="">Github</a>
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="col item-content">
+                        <div class="row justify-content-center item-content">
+                            <img src="../../photos/cartoon/pokemon0.3686591b.png" alt="" class="rounded-circle">
+                        </div>
+                        <div class="row justify-content-center item-content">
+                            <p>
+                                <a href="">Twitter</a>
+                            </p>
+                        </div>
+                    </div>
+
+
+                    <div class="col item-end">
+                        <div class="row justify-content-center item-end">
+                            <img src="../../photos/cartoon/pokemon11.6c797f8b.png" alt="" class="rounded-circle">
+                        </div>
+                        <div class="row justify-content-center item-end">
+                            <p>
+                                <a href="">WeChat</a>
+                            </p>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="row">
+                    <div class="col item-start">
+                        <div class="row justify-content-center item-start">
+                            <img src="../../photos/cartoon/pokemon13.a3adf0ac.png" alt="" class="rounded-circle">
+                        </div>
+                        <div class="row justify-content-center item-start">
+                            <p>
+                                <a href="">tangs@usst.edu.cn</a>
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="col item-content">
+                        <div class="row justify-content-center item-content">
+                            <img src="../../photos/cartoon/pokemon14.d1ad4502.jpg" alt="" class="rounded-circle">
+                        </div>
+                        <div class="row justify-content-center item-content">
+                            <p>
+                                <a href="">Linkedin</a>
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="col item-content">
+                        <div class="row justify-content-center item-content">
+                            <img src="../../photos/cartoon/pokemon15.21261a6f.jpg" alt="" class="rounded-circle">
+                        </div>
+                        <div class="row justify-content-center item-content">
+                            <p>
+                                <a href="">Github</a>
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="col item-content">
+                        <div class="row justify-content-center item-content">
+                            <img src="../../photos/cartoon/avatar1.a3e2fd8c.jpg" alt="" class="rounded-circle">
+                        </div>
+                        <div class="row justify-content-center item-content">
+                            <p>
+                                <a href="">Twitter</a>
+                            </p>
+                        </div>
+                    </div>
+
+
+                    <div class="col item-end">
+                        <div class="row justify-content-center item-end">
+                            <img src="../../photos/cartoon/avatar2.df9549ec.jpg" alt="" class="rounded-circle">
+                        </div>
+                        <div class="row justify-content-center item-end">
+                            <p>
+                                <a href="">WeChat</a>
+                            </p>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+
+        </div>
+        <div id="TEACHING" class="container-fluid subcontent">
+            <div class="container">
+                <div class="subtitle"><span>TEACHING</span> </div>
+                <p class="text-p">
+                    Try to scroll this section and look at the navigation bar while
+                    scrolling! Try to scroll this section and look at the navigation bar
+                    while scrolling!
+                </p>
+                <p class="text-p">
+                    Try to scroll this section and look at the navigation bar while
+                    scrolling! Try to scroll this section and look at the navigation bar
+                    while scrolling!
+                </p>
+            </div>
+
+        </div>
+        <div id="SERVICES" class="container-fluid bg-light subcontent">
+            <div class="container">
+                <div class="subtitle"><span>SERVICES</span> </div>
+                <h3>
+                    <p class="font-italic cursive  text-uppercase">Reviewer</p>
+                </h3>
+                <p class="text-p">
+                <ul>
+                    <li>
+                        <p>ICCV, CVPR, ICRA, IROS, </p>
+                    </li>
+                    <li>
+                        <p>Neural Networks, Applied Mathematical Modelling, CAAI Transactions on Intelligence Technology
+                            etc.</p>
+                    </li>
+                </ul>
+                </p>
+            </div>
+
+        </div>
+        <div id="MISC" class="container-fluid subcontent">
+            <div class="container">
+                <div class="subtitle"><span>MISCELLANEOUS</span></div>
+                <p class="text-p">
+                    Try to scroll this section and look at the navigation bar while
+                    scrolling! Try to scroll this section and look at the navigation bar
+                    while scrolling!
+                </p>
+                <p class="text-p">
+                    Try to scroll this section and look at the navigation bar while
+                    scrolling! Try to scroll this section and look at the navigation bar
+                    while scrolling!
+                </p>
+            </div>
+
+        </div>
+        <div id="CONTACT" class="container-fluid bg-light subcontent">
+            <div class="container">
+                <div class="subtitle"><span>CONTACT</span> </div>
+                <p class="text-p">
+                    Try to scroll this section and look at the navigation bar while
+                    scrolling! Try to scroll this section and look at the navigation bar
+                    while scrolling! Try to scroll this section and look at the navigation bar while
+                    scrolling! Try to scroll this section and look at the navigation bar
+                    while scrolling!
+                </p>
+                <p class="text-p">
+                    Try to scroll this section and look at the navigation bar while
+                    scrolling! Try to scroll this section and look at the navigation bar
+                    while scrolling! Try to scroll this section and look at the navigation bar while
+                    scrolling! Try to scroll this section and look at the navigation bar
+                    while scrolling!
+
+                </p>
+
+                <div class="container">
+                    <div class="row">
+                        <div class="col item-start">
+                            <div class="row justify-content-center item-start">
+                                <img src="./photos/email-icon.png" alt="">
+                            </div>
+                            <div class="row justify-content-center item-start">
+                                <p>
+                                    <a href="">tangs@usst.edu.cn</a>
+                                </p>
+                            </div>
+                        </div>
+
+                        <div class="col item-content">
+                            <div class="row justify-content-center item-content">
+                                <img src="./photos/linkedin-icon.png" alt="">
+                            </div>
+                            <div class="row justify-content-center item-content">
+                                <p>
+                                    <a href="">Linkedin</a>
+                                </p>
+                            </div>
+                        </div>
+
+                        <div class="col item-content">
+                            <div class="row justify-content-center item-content">
+                                <img src="./photos/github-icon.png" alt="">
+                            </div>
+                            <div class="row justify-content-center item-content">
+                                <p>
+                                    <a href="">Github</a>
+                                </p>
+                            </div>
+                        </div>
+
+                        <div class="col item-content">
+                            <div class="row justify-content-center item-content">
+                                <img src="./photos/twitter-icon.png" alt="">
+                            </div>
+                            <div class="row justify-content-center item-content">
+                                <p>
+                                    <a href="">Twitter</a>
+                                </p>
+                            </div>
+                        </div>
+
+
+                        <div class="col item-end">
+                            <div class="row justify-content-center item-end">
+                                <img src="./photos/weixin-icon.png" alt="">
+                            </div>
+                            <div class="row justify-content-center item-end">
+                                <p>
+                                    <a href="">WeChat</a>
+                                </p>
+                            </div>
+                        </div>
+
+                    </div>
+
+
+
+
+
+
+
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+
+</body>
+
+</html>
