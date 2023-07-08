@@ -1,47 +1,210 @@
+
+body {
+    position: relative;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+.nav-link.active {
+    text-decoration: underline;
+}
+
+.subtitle {
+    color: #998d71;
+    font-size: 24px;
+    font-weight: 500;
+    margin-bottom: 5%;
+    padding-top: 5%;
+}
+
+.subtitle span {
+    border-color: #998d71;
+    border-bottom: solid;
+    border-bottom-width: 3px;
+    padding-bottom: 20px;
+}
+
+.text-p {
+    margin-top: auto;
+}
+
+.subcontent {
+    /* margin-bottom: 8%; */
+    margin: auto;
+    padding-bottom: 1%;
+}
+
+
+
+.bg {
+    background: url('./photos/bg.jpg');
+    height: 550px;
+    text-align: center;
+    line-height: 550px;
+    position: absolute;
+    z-index: -1;
+}
+
+.bg-blur {
+    float: left;
+    width: 100%;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    -webkit-filter: blur(4px);
+    -moz-filter: blur(4px);
+    -o-filter: blur(4px);
+    -ms-filter: blur(4px);
+    filter: blur(4px);
+}
+
+.nav-border {
+    border-top: white solid;
+    border-bottom: white solid 1px;
+    font-weight: 500;
+}
+
+
+nav .active {
+    text-decoration: underline;
+    text-decoration-color: white;
+}
+
+.cursive {
+    font-family: "Gabriola", "Harrington", "Lucida Calligraphy", "sans-serif";
+}
+
+ol {
+    margin-bottom: 3%;
+}
+
+a {
+    color: #5c83bc;
+}
+
+.num-large {
+    font-size: 30px;
+    font-family: 'Harrington', Courier, monospace;
+}
+
+.row.item-start {
+    margin: 0px 0px 0px 0px;
+}
+
+.row.item-content {
+    margin: 0px 0px 0px 15px;
+
+}
+
+.row.item-end {
+    margin: 0px 0px 0px 15px;
+}
+
+.col-md-2.item-start {
+    padding: 0px 0px 0px 0px;
+}
+
+.col-md-2.item-content {
+    margin: 0px 0px 0px 40px;
+}
+
+.col-md-2.item-end {
+    margin: 0px 0px 0px 40px;
+}
+
+#People img{
+    width: 170px;
+    height: 170px;
+}
+
+.p_abstract{
+    /* overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical; */
+    text-indent: 2em;
+    margin: 2% ;
+    padding: 1%;
+    background-color: #f0f0ee;
+    /* word-break: keep-all; */
+    word-wrap: break-word; 
+    /* white-space: pre-wrap;  */
+    text-align:justify;  
+    /* text-justify:inter-ideograph; */
+}
+.p_abstract:hover{
+    /* overflow: visible;
+    -webkit-line-clamp: none; */
+
+}
+
+.p_img{
+    position: relative;
+
+}
+
+.p_img img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    /* display: block; */
+    padding: 10px;
+}
+
+.article-title{
+    font-weight: bold;
+    /* font-size: smaller; */
+}
+.article-title span{
+    /* padding-top: 2%; */
+    display: block;
+    font-family:'Times New Roman', Times, serif;
+    font-size: larger;
+}
 @font-face {
-    font-family: Poppins Medium;
+    font-family: Georgia, 'Times New Roman', Times, serif;
     font-style: normal;
     font-weight: 400;
     src: url(TEA Group_files/Poppins-Medium.f61a4eb2.ttf);
 }
 
 @font-face {
-    font-family: Poppins Regular;
+    font-family: Georgia, 'Times New Roman', Times, serif;;
     font-style: normal;
     font-weight: 400;
     src: url(TEA Group_files/Poppins-Regular.8b6af8e5.ttf);
 }
 
 @font-face {
-    font-family: Poppins SemiBold;
+    font-family: Georgia, 'Times New Roman', Times, serif;;
     font-style: normal;
     font-weight: 400;
     src: url(TEA Group_files/Poppins-SemiBold.4cdacb8f.ttf);
 }
 
 @font-face {
-    font-family: Poppins Bold;
+    font-family: Georgia, 'Times New Roman', Times, serif;;
     font-style: normal;
     font-weight: 400;
     src: url(TEA Group_files/Poppins-Bold.a3e0b5f4.ttf);
 }
 
 @font-face {
-    font-family: Poppins ExtraBold;
+    font-family: Georgia, 'Times New Roman', Times, serif;;
     font-style: normal;
     font-weight: 400;
     src: url(TEA Group_files/Poppins-ExtraBold.544fa4f2.ttf);
 }
 
 @font-face {
-    font-family: Poppins Light;
+    font-family: Georgia, 'Times New Roman', Times, serif;;
     font-style: normal;
     font-weight: 400;
     src: url(TEA Group_files/Poppins-Light.f6ea751e.ttf);
 }
 
 @font-face {
-    font-family: Poppins Thin;
+    font-family: Georgia, 'Times New Roman', Times, serif;;
     font-style: normal;
     font-weight: 400;
     src: url(TEA Group_files/Poppins-Thin.25cd0f68.ttf);
@@ -54,7 +217,7 @@
 body {
     margin: 0;
     overflow-y: overlay;
-    font-family: Poppins Regular;
+    font-family: Georgia, 'Times New Roman', Times, serif;;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
 }
@@ -86,7 +249,7 @@ body ::-webkit-scrollbar-thumb {
     width: 160px;
     cursor: pointer;
     transition: 0.2s;
-    font-family: Poppins SemiBold;
+    font-family: Georgia, 'Times New Roman', Times, serif;;
 }
 
 .btn:active {
@@ -166,7 +329,7 @@ body ::-webkit-scrollbar-thumb {
 
 .profile-details-name {
     font-size: 18px;
-    font-family: Poppins SemiBold;
+    font-family: Georgia, 'Times New Roman', Times, serif;;
 }
 
 .profile-details-role {
@@ -176,12 +339,12 @@ body ::-webkit-scrollbar-thumb {
 }
 
 .profile-details-role h1 {
-    font-family: Poppins Bold;
+    font-family: Georgia, 'Times New Roman', Times, serif;;
     font-size: 40px;
 }
 
 .primary-text {
-    font-family: Poppins Bold;
+    font-family: Georgia, 'Times New Roman', Times, serif;;
     color: (--white);
 }
 
@@ -189,7 +352,7 @@ body ::-webkit-scrollbar-thumb {
     display: block;
     font-size: 18px;
     float: left;
-    font-family: Poppins SemiBold;
+    font-family: Georgia, 'Times New Roman', Times, serif;;
     width: 600px;
     height: 300px;
     text-align: justify;
@@ -301,7 +464,7 @@ body ::-webkit-scrollbar-thumb {
 .screen-heading {
     font-size: 30px;
     color: #000;
-    font-family: Poppins Bold;
+    font-family: Georgia, 'Times New Roman', Times, serif;
 }
 
 .heading-seperator {
@@ -339,12 +502,13 @@ body ::-webkit-scrollbar-thumb {
 }
 
 .news {
-    font-family: Poppins SemiBold;
+    font-family: Georgia, 'Times New Roman', Times, serif;
     font-size: 18px;
     width: 80%;
     position: relative;
     margin: 0 auto;
 }
+
 
 .people-list {
     width: 50%;
@@ -352,12 +516,12 @@ body ::-webkit-scrollbar-thumb {
 }
 
 .people-content {
-    font-family: Poppins SemiBold;
+    font-family: Georgia, 'Times New Roman', Times, serif;
     font-size: 18px;
 }
 
 .people-title {
-    font-family: Poppins Medium;
+    font-family: Georgia, 'Times New Roman', Times, serif;
     font-size: 16px;
 }
 
@@ -378,7 +542,7 @@ div.gallery:hover {
 }
 
 div.gallery img {
-    width: 50%;
+    width: 35%;
     height: auto;
     margin-bottom: 5px;
     position: relative;
@@ -442,7 +606,13 @@ div.desc {
 .research-projects {
     width: 100%;
     box-shadow: 0 0 20px -2px #f5a107;
+	/* box-shadow:5px 0px 15px 0px #d1a182; */
     position: relative;
+}
+.research-projects:hover{
+	cursor: pointer;
+	border: #dd9106 2px solid;
+    box-shadow:0px 0px 10px 5px #f5a107;
 }
 
 .project-image {
@@ -455,7 +625,7 @@ div.desc {
 }
 
 .project-title {
-    font-family: Poppins SemiBold;
+    font-family: Georgia, 'Times New Roman', Times, serif;
     font-size: larger;
     margin: 40px 0 0;
 }
@@ -464,7 +634,7 @@ div.desc {
     width: 48%;
     text-align: left;
     padding: 30px;
-    font-family: Poppins Regular;
+    font-family: Georgia, 'Times New Roman', Times, serif;
 }
 
 .bottom-bar {
@@ -496,8 +666,7 @@ div.desc {
 }
 
 .publication-introduction {
-    font-family: Lucida Sans, Lucida Sans Regular, Lucida Grande,
-        Lucida Sans Unicode, Geneva, Verdana, sans-serif;
+    font-family: Georgia, 'Times New Roman', Times, serif;
     font-size: 18px;
 }
 
@@ -509,13 +678,13 @@ div.desc {
 }
 
 .publication-title {
-    font-family: Poppins SemiBold;
+    font-family: Georgia, 'Times New Roman', Times, serif;
     font-size: 18px;
 }
 
 .publication-autors,
 .publication-journal {
-    font-family: Poppins Regular;
+    font-family: Georgia, 'Times New Roman', Times, serif;
     font-size: 16px;
 }
 
@@ -529,7 +698,7 @@ div.desc {
 
 .content,
 .forward {
-    font-family: Poppins Regular;
+    font-family: Georgia, 'Times New Roman', Times, serif;
     font-size: 18px;
     width: 80%;
     position: relative;
@@ -544,7 +713,7 @@ div.desc {
 }
 
 .ack-title {
-    font-family: Poppins Bold;
+    font-family: Georgia, 'Times New Roman', Times, serif;
     font-size: 30px;
     position: relative;
     left: 45%;
@@ -735,5 +904,3 @@ div.desc {
     display: flex;
     flex-direction: column;
 }
-
-/*# sourceMappingURL=main.db5ba40c.chunk.css.map */
