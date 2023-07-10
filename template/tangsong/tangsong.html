@@ -57,7 +57,7 @@
         }
 
         .bg {
-            background: url('./photos/bg.jpg');
+            background: url('./photos/bg4.jpg');
             height: 550px;
             text-align: center;
             line-height: 550px;
@@ -71,11 +71,11 @@
             background-repeat: no-repeat;
             background-position: center;
             background-size: cover;
-            -webkit-filter: blur(4px);
+            /* -webkit-filter: blur(4px);
             -moz-filter: blur(4px);
             -o-filter: blur(4px);
             -ms-filter: blur(4px);
-            filter: blur(4px);
+            filter: blur(4px); */
         }
 
         .nav-border {
@@ -112,25 +112,31 @@
         }
 
         .row.item-content {
-            margin: 0px 0px 0px 15px;
+            margin: 0px 0px 0px 5px;
 
         }
 
         .row.item-end {
-            margin: 0px 0px 0px 15px;
+            margin: 0px 0px 0px 5px;
         }
 
-        .col.item-start {
+        .col-md-1.item-start {
             padding: 0px 0px 0px 0px;
         }
 
-        .col.item-content {
-            padding: 0px 0px 0px 15px;
+        .col-md-1.item-content {
+            margin: 0px 0px 0px 15px;
         }
 
-        .col.item-end {
-            padding: 0px 0px 0px 15px;
+        .col-md-1.item-end {
+            margin: 0px 0px 0px 15px;
         }
+        
+        #CONTACT img{
+            width: 70px;
+            height: 70px;
+        }
+
         #STUDENTS img{
             height: 150px;
             width: 150px;
@@ -188,7 +194,7 @@
             <div class="text-center ">
                 <div class="">
                     <img decoding="async" src="./photos/tangsong.png" alt="" class="rounded-circle"
-                        style="height: 170px;width: 170px;">
+                        style="height: 170px;width: 150px;">
                     <span
                         style="color: white;font-size: 50px;margin-left: 5%;display: inline-block; height: 170px;line-height: 170px;">Song
                         Tang (唐宋)</span>
@@ -215,9 +221,9 @@
                         <li class="nav-item ">
                             <a class="nav-link" href="#SERVICES">SERVICES</a>
                         </li>
-                        <li class="nav-item ">
+                        <!-- <li class="nav-item ">
                             <a class="nav-link" href="#MISC">MISC</a>
-                        </li>
+                        </li> -->
                         <li class="nav-item ">
                             <a class="nav-link" href="#CONTACT">CONTACT</a>
                         </li>
@@ -469,7 +475,7 @@
 
             </div>
         </div>
-        <div id="STUDENTS" class="container-fluid bg-light subcontent">
+        <div id="STUDENTS" class="container-fluid bg-light subcontent d-none">
             <div class="container">
                 <div class="subtitle"><span>STUDENTS</span></div>
                 <p class="text-p">
@@ -643,7 +649,7 @@
             </div>
 
         </div>
-        <div id="MISC" class="container-fluid subcontent">
+        <!-- <div id="MISC" class="container-fluid subcontent">
             <div class="container">
                 <div class="subtitle"><span>MISCELLANEOUS</span></div>
                 <p class="text-p">
@@ -658,40 +664,41 @@
                 </p>
             </div>
 
-        </div>
+        </div> -->
         <div id="CONTACT" class="container-fluid bg-light subcontent">
             <div class="container">
                 <div class="subtitle"><span>CONTACT</span> </div>
-                <p class="text-p">
-                    Try to scroll this section and look at the navigation bar while
-                    scrolling! Try to scroll this section and look at the navigation bar
-                    while scrolling! Try to scroll this section and look at the navigation bar while
-                    scrolling! Try to scroll this section and look at the navigation bar
-                    while scrolling!
-                </p>
-                <p class="text-p">
-                    Try to scroll this section and look at the navigation bar while
-                    scrolling! Try to scroll this section and look at the navigation bar
-                    while scrolling! Try to scroll this section and look at the navigation bar while
-                    scrolling! Try to scroll this section and look at the navigation bar
-                    while scrolling!
-
-                </p>
+               
 
                 <div class="container">
+                    <h3>
+                        <p class="font-italic cursive  text-uppercase">Friendly Links</p>
+                    </h3>
                     <div class="row">
-                        <div class="col item-start">
+
+                        <div class="col-md-8">
+                            <ul>
+                                <li> <a href="https://www.usst.edu.cn/main.htm">University of Shanghai for Science and Technology (USST)</a></li>
+                                <li><a href="https://jqzn.usst.edu.cn/main.htm">USST, Institute of Machine Intelligence</a></li>
+                                <li><a href="https://www.uni-hamburg.de/">Hamburg University (UHH)</a></li>
+                            </ul>
+                           
+                            
+                           
+                        </div>
+
+                        <div class="col-md-1 item-start">
                             <div class="row justify-content-center item-start">
                                 <img src="./photos/email-icon.png" alt="">
                             </div>
                             <div class="row justify-content-center item-start">
                                 <p>
-                                    <a href="">tangs@usst.edu.cn</a>
+                                    <a href="mailto:tangs@usst.edu.cn">tangs@usst.edu.cn</a>
                                 </p>
                             </div>
                         </div>
 
-                        <div class="col item-content">
+                        <!-- <div class="col item-content">
                             <div class="row justify-content-center item-content">
                                 <img src="./photos/linkedin-icon.png" alt="">
                             </div>
@@ -700,20 +707,20 @@
                                     <a href="">Linkedin</a>
                                 </p>
                             </div>
-                        </div>
+                        </div> -->
 
-                        <div class="col item-content">
+                        <div class="col-md-1 item-content">
                             <div class="row justify-content-center item-content">
                                 <img src="./photos/github-icon.png" alt="">
                             </div>
                             <div class="row justify-content-center item-content">
                                 <p>
-                                    <a href="">Github</a>
+                                    <a href="https://github.com/tntek">Github</a>
                                 </p>
                             </div>
                         </div>
 
-                        <div class="col item-content">
+                        <!-- <div class="col item-content">
                             <div class="row justify-content-center item-content">
                                 <img src="./photos/twitter-icon.png" alt="">
                             </div>
@@ -722,10 +729,10 @@
                                     <a href="">Twitter</a>
                                 </p>
                             </div>
-                        </div>
+                        </div> -->
 
 
-                        <div class="col item-end">
+                        <div class="col-md-1 item-end">
                             <div class="row justify-content-center item-end">
                                 <img src="./photos/weixin-icon.png" alt="">
                             </div>
