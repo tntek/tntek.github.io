@@ -116,6 +116,14 @@ a {
     height: 170px;
 }
 
+#People a{
+    display: block;
+}
+
+#People p{
+    text-align: center;
+}
+
 .p_abstract{
     /* overflow: hidden;
     text-overflow: ellipsis;
@@ -160,6 +168,14 @@ a {
     display: block;
     font-family:'Times New Roman', Times, serif;
     font-size: larger;
+}
+
+
+/* @font-face {
+    font-family: "AaJianHaoTi-2";       
+    src:url(fonts/AaJianHaoTi-2.ttf);       
+    font-weight: normal;
+    font-style: normal;
 }
 
 
@@ -210,7 +226,7 @@ a {
     font-style: normal;
     font-weight: 400;
     src: url(TEA Group_files/Poppins-Thin.25cd0f68.ttf);
-}
+} */
 
 * {
     outline: none;
@@ -440,13 +456,13 @@ body ::-webkit-scrollbar-thumb {
     }
 }
 
-.home-container {
+/* .home-container {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     min-height: 10%;
     background-image: url(TEA Group_files/bg.07d5078c.png);
-}
+} */
 
 .heading-container {
     display: flex;
