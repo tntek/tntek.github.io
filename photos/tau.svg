@@ -1,0 +1,16 @@
+<svg version="1.2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 150" width="200" height="150">
+	<title>τ</title>
+	<style>
+		tspan { white-space:pre } 
+		.t0 { font-size: 150px;fill: #296955;font-weight: 400;font-family: "AaJianHaoTi", "AaJianHaoTi" } 
+		.t1 { font-size: 27px;fill: #296955;font-weight: 700;font-family: "Calibri-Bold", "Calibri" } 
+	</style>
+	<text id="τ" style="transform: matrix(1,0,0,1,57,95)" >
+		<tspan x="0" y="0" class="t0">τ</tspan><tspan  y="0" class="t0">
+</tspan>
+	</text>
+	<text id="TAU LAB" style="transform: matrix(1,0,0,1,53,123)" >
+		<tspan x="0" y="0" class="t1">T</tspan><tspan  y="0" class="t1">A</tspan><tspan  y="0" class="t1">U</tspan><tspan  y="0" class="t1"> </tspan><tspan  y="0" class="t1">L</tspan><tspan  y="0" class="t1">A</tspan><tspan  y="0" class="t1">B
+</tspan>
+	</text>
+</svg>
