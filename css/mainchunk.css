@@ -107,11 +107,11 @@ a {
 }
 
 .col-md-2.item-content {
-    margin: 0px 0px 0px 40px;
+    margin: 0px 0px 0px 20px;
 }
 
 .col-md-2.item-end {
-    margin: 0px 0px 0px 40px;
+    margin: 0px 0px 0px 20px;
 }
 
 #People img{
@@ -634,6 +634,7 @@ div.desc {
 .research-projects {
     width: 100%;
     box-shadow: 0 0 20px -2px #f5a107;
+    margin-bottom: 20px;
 	/* box-shadow:5px 0px 15px 0px #d1a182; */
     position: relative;
 }
