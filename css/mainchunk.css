@@ -1,7 +1,8 @@
 
 body {
     position: relative;
-    font-family: Georgia, 'Times New Roman', Times, serif;
+    /* font-family: Georgia, 'Times New Roman', Times, serif; */
+    font-family: Arial, Helvetica, sans-serif;
 }
 
 .nav-link.active {
@@ -70,7 +71,8 @@ nav .active {
 }
 
 .cursive {
-    font-family: "Gabriola", "Harrington", "Lucida Calligraphy", "sans-serif";
+    /* font-family: "Gabriola", "Harrington", "Lucida Calligraphy", "sans-serif"; */
+    font-family: Arial, Helvetica, sans-serif;
 }
 
 ol {
@@ -84,6 +86,7 @@ a {
 .num-large {
     font-size: 30px;
     font-family: 'Harrington', Courier, monospace;
+    /* font-family: Arial, Helvetica, sans-serif; */
 }
 
 .row.item-start {
@@ -167,10 +170,17 @@ a {
     /* padding-top: 2%; */
     display: block;
     font-family:'Times New Roman', Times, serif;
+    /* font-family: Arial, Helvetica, sans-serif; */
     font-size: larger;
 }
 
+.screen-heading span{
+    font-family: Arial, Helvetica, sans-serif;
+}
 
+.header-option span{
+    font-family: Arial, Helvetica, sans-serif;
+}
 /* @font-face {
     font-family: "AaJianHaoTi-2";       
     src:url(fonts/AaJianHaoTi-2.ttf);       
