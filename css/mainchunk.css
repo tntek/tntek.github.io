@@ -181,6 +181,43 @@ a {
 .header-option span{
     font-family: Arial, Helvetica, sans-serif;
 }
+
+.ins-ico {
+    color: white;
+    background: #b509ac;
+    padding: 0 15px 0 15px;
+}
+
+.del-p{
+    margin: 0;
+}
+
+.link-ico{
+    
+    border: 1px #000 solid;
+    padding: 5px 10px 5px 10px;
+    margin: 0 10px 0 0 ;
+    color: black;
+    font-size: 14px;
+}
+
+.link-ico:hover {
+    border: 1px #b509ac solid;
+    color: #b509ac;
+    text-decoration: none;
+}
+
+.news-parent li{
+    margin-bottom: 10px;
+}
+
+.code pre{
+    background-color:rgba(181,9,172,0.05);
+    border-radius: 6px;
+}
+.nc {
+    color
+}
 /* @font-face {
     font-family: "AaJianHaoTi-2";       
     src:url(fonts/AaJianHaoTi-2.ttf);       
