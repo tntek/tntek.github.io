@@ -215,6 +215,56 @@ a {
     background-color:rgba(181,9,172,0.05);
     border-radius: 6px;
 }
+.graduated_s {
+    padding: 0;
+}
+
+.graduated_s li {
+    margin-bottom: 5px;
+}
+
+#tagsList {
+
+	position: relative;
+
+	width: 450px;
+
+	height: 200px;
+
+    padding: 0;
+	/* margin: 0 auto 0; */
+
+}
+
+#tagsList a {
+
+	position: absolute;
+
+	top: 0px;
+
+	left: 0px;
+
+	font-family: Microsoft YaHei;
+
+	color: white;
+
+	font-weight: bold;
+
+	text-decoration: none;
+
+	padding: 3px 6px;
+    border-radius: 50px;
+    background-color: aquamarine;
+
+}
+
+#tagsList a:hover {
+    
+	/* letter-spacing: 2px; */
+
+    cursor: pointer;
+
+}
 
 /* @font-face {
     font-family: "AaJianHaoTi-2";       
