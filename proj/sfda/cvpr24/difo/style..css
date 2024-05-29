@@ -83,7 +83,7 @@
     
 } */
 .container .Abstract{
-    max-width: 1000px; /* 容器的最大宽度风险，确保在较小屏幕上的适应性 */
+    max-width: 1200px; /* 容器的最大宽度风险，确保在较小屏幕上的适应性 */
     margin: 0 auto; /* 水平居中对齐 */
     margin-top: 80px; /* 顶部外边距 */
     padding-left: 20px; /* 左内边距 */
