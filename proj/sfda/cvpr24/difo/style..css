@@ -82,19 +82,18 @@
     width: 100%;
     
 } */
-.container .nav {
-    width: 1400px;
-    margin: 0 auto;
-    margin-top: 20px;
-    display: flex; /* 确保flex布局 */
-    justify-content: space-around; /* 使用 space-around 为所有链接提供均匀的空间 */
+.container .Abstract{
+    max-width: 1400px; /* 容器的最大宽度风险，确保在较小屏幕上的适应性 */
+    margin: 0 auto; /* 水平居中对齐 */
+    margin-top: 80px; /* 顶部外边距 */
+    padding-left: 20px; /* 左内边距 */
+    padding-right: 20px; /* 右内边距 */
+    text-align: left; /* 文本左对齐 */
 }
 
-.container .nav a {
-    color: black;
+.container .Abstract p{
     font-size: 20px;
-    padding-left: 10px; /* 为链接添加左内边距，实际上增加间距 */
-    padding-right: 10px; /* 为链接添加右内边距，实际上增加间距 */
+    /* 你可以移除width: 100%;因为<p>标签本身就是块级元素，会自动占满容器的宽度 */
 }
 .container .citation{
     width: 1350px;
