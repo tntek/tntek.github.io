@@ -10,7 +10,7 @@
     font-size: 25px;
 }
 .container .nav{
-    width: 600px;
+    width: 1400px;
     margin: 0 auto;
     display: flex;
     justify-content: space-between;
@@ -20,7 +20,7 @@
     font-size: 20px;
 }
 .container .jieshao{
-    width: 600px;
+    width: 700px;
     margin: 0 auto;
     margin-top: 20px;
     display: flex;
