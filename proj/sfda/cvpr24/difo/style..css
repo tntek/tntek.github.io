@@ -72,7 +72,7 @@
     border: 1px solid white;
     box-shadow: 0px 1px 10px gray;
 }
-.container .Abstract{
+/* .container .Abstract{
     width: 1400px;
     margin: 0 auto;
     margin-top: 80px;
@@ -81,6 +81,18 @@
 .container .Abstract p{
     width: 100%;
     
+} */
+.container .Abstract{
+    width: 1000px; /* 或者设为 max-width: 1400px; 以适应较小的屏幕 */
+    margin: 0 auto; /* 居中对齐 */
+    margin-top: 80px; /* 顶部外边距 */
+    text-align: left; /* 文本左对齐 */
+}
+
+.container .Abstract p{
+    width: 100%; /* p元素的宽度占满容器 */
+    padding-left: 40px; /* 增加左内边距 */
+    padding-right: 40px; /* 增加右内边距 */
 }
 .container .citation{
     width: 1350px;
