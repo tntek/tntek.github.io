@@ -12,8 +12,9 @@
 .container .nav{
     width: 1400px;
     margin: 0 auto;
-    display: flex;
-    justify-content: space-between;
+    margin-top: 20px;
+/*     display: flex;
+    justify-content: space-between; */
 }
 .container .nav a{
     color: black;
