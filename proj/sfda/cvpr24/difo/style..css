@@ -49,9 +49,10 @@
     box-shadow: 0px 1px 10px gray;
 }
 .container .Abstract{
-    width: 1350px;
+    width: 600px;
     margin: 0 auto;
     margin-top: 80px;
+    text-align: left;
 }
 .container .Abstract p{
     width: 100%;
