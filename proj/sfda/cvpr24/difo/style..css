@@ -95,6 +95,15 @@
     font-size: 20px;
     /* 你可以移除width: 100%;因为<p>标签本身就是块级元素，会自动占满容器的宽度 */
 }
+.image-container {
+    text-align: center; /* 使图片居中对齐 */
+    margin-top: 20px; /* 图片顶部外边距 */
+}
+
+.image-container img {
+    max-width: 100%; /* 图片最大宽度为容器宽度的100%，确保响应式 */
+    height: auto; /* 高度自动调整 */
+}
 .container .citation{
     width: 1350px;
     margin: 0 auto;
