@@ -25,7 +25,7 @@
     margin: 0 auto;
     margin-top: 20px;
 /*     display: flex; /* 确保已经定义flex布局 */
-    justify-content: space-between; */
+/*     justify-content: space-between; */ */
 }
 
 .container .nav a {
