@@ -9,7 +9,7 @@
 .container .title p{
     font-size: 25px;
 }
-.container .nav{
+/* .container .nav{
     width: 1400px;
     margin: 0 auto;
     margin-top: 20px;
@@ -19,6 +19,28 @@
     color: black;
     font-size: 20px;
     
+} */
+.container .nav {
+    width: 1400px;
+    margin: 0 auto;
+    margin-top: 20px;
+    display: flex; /* 确保已经定义flex布局 */
+    justify-content: space-between;
+}
+
+.container .nav a {
+    color: black;
+    font-size: 20px;
+    margin-left: 10px; /* 为链接添加左边距 */
+    margin-right: 10px; /* 为链接添加右边距 */
+}
+
+.container .nav a:first-child {
+    margin-left: 0; /* 第一个链接的左边距设置为0 */
+}
+
+.container .nav a:last-child {
+    margin-right: 0; /* 最后一个链接的右边距设置为0 */
 }
 
 .container .jieshao{
