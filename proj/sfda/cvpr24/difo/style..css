@@ -27,7 +27,7 @@
     justify-content: space-between;
 }
 .container .jieshao p{
-    font-size: 30px;
+    font-size: 20px;
 }
 .container .menu{
     width: 1400px;
@@ -56,7 +56,10 @@
     justify-content: space-between;
 }
 .container .Abstract p{
-    font-size: 30px;
+    font-size: 18px;
+    text-align: left; /* 设置文本左对齐 */
+    margin-left: 600px; /* 设置与页面左边的距离为600像素 */
+}
     
 }
 .container .citation{
