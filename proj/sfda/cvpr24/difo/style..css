@@ -101,7 +101,7 @@
 }
 
 .image-container img {
-    max-width: 600px; /* 设置图片的最大宽度 */
+    max-width: 800px; /* 设置图片的最大宽度 */
     width: 100%; /* 确保图片宽度不会超过其容器 */
     height: auto; /* 高度自动调整，维持宽高比 */
 }
