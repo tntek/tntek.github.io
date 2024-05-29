@@ -21,11 +21,11 @@
     
 } */
 .container .nav {
-    width: 1400px;
+    width: 1000px;
     margin: 0 auto;
     margin-top: 20px;
-    display: flex; /* 确保已经定义flex布局 */
-    justify-content: space-between;
+/*     display: flex; /* 确保已经定义flex布局 */
+    justify-content: space-between; */
 }
 
 .container .nav a {
