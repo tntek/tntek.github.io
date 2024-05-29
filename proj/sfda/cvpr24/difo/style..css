@@ -12,16 +12,17 @@
 .container .nav{
     width: 1400px;
     margin: 0 auto;
-/*     margin-top: 20px; */
+    margin-top: 20px;
+    margin-right: 20px; /* 为链接之间添加20px的右边距 */
     display: flex;
     justify-content: space-between;
 }
-/* .container .nav a{
+.container .nav a{
     color: black;
     font-size: 20px;
     
-} */
-.container .nav a {
+}
+/* .container .nav a {
     color: black;
     font-size: 20px;
     margin-right: 20px; /* 为链接之间添加20px的右边距 */
@@ -29,7 +30,7 @@
 
 .container .nav a:not(:last-child) {
     margin-right: 20px; /* 为最后一个链接之外的链接设置右边距 */
-}
+} */
 .container .jieshao{
     width: 700px;
     margin: 0 auto;
