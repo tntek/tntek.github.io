@@ -101,8 +101,9 @@
 }
 
 .image-container img {
-    max-width: 100%; /* 图片最大宽度为容器宽度的100%，确保响应式 */
-    height: auto; /* 高度自动调整 */
+    max-width: 600px; /* 设置图片的最大宽度 */
+    width: 100%; /* 确保图片宽度不会超过其容器 */
+    height: auto; /* 高度自动调整，维持宽高比 */
 }
 .container .citation{
     width: 1350px;
