@@ -13,8 +13,8 @@
     width: 1400px;
     margin: 0 auto;
     margin-top: 20px;
-/*     margin-right: 20px; /* 为链接之间添加20px的右边距 */ */
-    display: flex;
+    margin-right: 20px;
+    margin-left:20px;
     justify-content: space-between;
 }
 .container .nav a{
