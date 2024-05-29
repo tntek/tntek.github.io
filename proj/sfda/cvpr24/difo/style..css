@@ -82,17 +82,19 @@
     width: 100%;
     
 } */
-.container .Abstract{
-    width: 1000px; /* 或者设为 max-width: 1400px; 以适应较小的屏幕 */
-    margin: 0 auto; /* 居中对齐 */
-    margin-top: 80px; /* 顶部外边距 */
-    text-align: left; /* 文本左对齐 */
+.container .nav {
+    width: 1400px;
+    margin: 0 auto;
+    margin-top: 20px;
+    display: flex; /* 确保flex布局 */
+    justify-content: space-around; /* 使用 space-around 为所有链接提供均匀的空间 */
 }
 
-.container .Abstract p{
-    width: 100%; /* p元素的宽度占满容器 */
-    padding-left: 40px; /* 增加左内边距 */
-    padding-right: 40px; /* 增加右内边距 */
+.container .nav a {
+    color: black;
+    font-size: 20px;
+    padding-left: 10px; /* 为链接添加左内边距，实际上增加间距 */
+    padding-right: 10px; /* 为链接添加右内边距，实际上增加间距 */
 }
 .container .citation{
     width: 1350px;
