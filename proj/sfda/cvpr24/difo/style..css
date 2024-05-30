@@ -121,13 +121,13 @@
 
 /* 图片容器样式 */
 .image-container {
-    text-align: center; /* 图片居中对齐 */
+    text-align: center; /* 使图片居中对齐 */
     margin-top: 20px; /* 图片顶部外边距 */
 }
 
-/* 图片样式 */
 .image-container img {
-    max-width: 100%; /* 确保图片宽度不会超过容器 */
+    max-width: 1400px; /* 设置图片的最大宽度 */
+    width: 100%; /* 确保图片宽度不会超过其容器 */
     height: auto; /* 高度自动调整，维持宽高比 */
 }
 
