@@ -1,31 +1,30 @@
-.container{
+.container {
     text-align: center;
     padding-top: 80px;
+    max-width: 1100px; /* 容器的最大宽度，确保在较小屏幕上的适应性 */
+    margin: 0 auto; /* 水平居中对齐 */
+    margin-top: 20px; /* 顶部外边距 */
+    padding-left: 20px; /* 左内边距 */
+    padding-right: 20px; /* 右内边距 */
+    text-align: left; /* 文本左对齐 */
+    font-size: 25px;
 }
-.container h2{
+
+.container h2 {
     font-size: 30px;
     color: rgb(30, 108, 147);
 }
-.container .title p{
+
+.container .title p {
     font-size: 25px;
 }
-/* .container .nav{
-    width: 1400px;
-    margin: 0 auto;
-    margin-top: 20px;
-    justify-content: space-between;
-}
-.container .nav a{
-    color: black;
-    font-size: 20px;
-    
-} */
+
 .container .nav {
     width: 1000px;
     margin: 0 auto;
     margin-top: 20px;
-/*     display: flex; /* 确保已经定义flex布局 */
-/*     justify-content: space-between; */ */
+    /* display: flex; /* 确保已经定义flex布局 */
+    /* justify-content: space-between; */
 }
 
 .container .nav a {
@@ -43,36 +42,41 @@
     margin-right: 0; /* 最后一个链接的右边距设置为0 */
 }
 
-.container .jieshao{
+.container .jieshao {
     width: 700px;
     margin: 0 auto;
     margin-top: 20px;
     display: flex;
     justify-content: space-between;
 }
-.container .jieshao p{
+
+.container .jieshao p {
     font-size: 15px;
 }
-.container .menu{
+
+.container .menu {
     width: 1400px;
     margin: 0 auto;
     margin-top: 20px;
 }
-.container .menu a{
+
+.container .menu a {
     display: inline-block;
     width: 12%;
     margin: 0 20px;
     background-color: rgb(30, 108, 147);
     color: white;
     text-decoration: none;
-    padding:8px 10px;
+    padding: 8px 10px;
     border-radius: 5px;
 }
-.container .menu a:hover{
+
+.container .menu a:hover {
     border: 1px solid white;
     box-shadow: 0px 1px 10px gray;
 }
-.container .Abstract{
+
+.container .Abstract {
     max-width: 1100px; /* 容器的最大宽度风险，确保在较小屏幕上的适应性 */
     margin: 0 auto; /* 水平居中对齐 */
     margin-top: 20px; /* 顶部外边距 */
@@ -82,21 +86,11 @@
     font-size: 25px;
 }
 
-.container .Abstract p{
+.container .Abstract p {
     font-size: 20px;
     text-align: justify;
     hyphens: auto;
-    
     /* 你可以移除width: 100%;因为<p>标签本身就是块级元素，会自动占满容器的宽度 */
-}
-.container {
-    max-width: 1100px; /* 容器的最大宽度，确保在较小屏幕上的适应性 */
-    margin: 0 auto; /* 水平居中对齐 */
-    margin-top: 20px; /* 顶部外边距 */
-    padding-left: 20px; /* 左内边距 */
-    padding-right: 20px; /* 右内边距 */
-    text-align: left; /* 文本左对齐 */
-    font-size: 25px;
 }
 
 /* 标题样式 */
@@ -125,20 +119,24 @@
     font-size: 16px; /* 描述文字大小 */
     color: #333; /* 描述文字颜色 */
 }
-.container .citation{
+
+.container .citation {
     width: 1350px;
     margin: 0 auto;
     margin-top: 50px;
     text-align: left;
 }
-.container .citation p{
+
+.container .citation p {
     font-size: 25px;
     color: rgb(30, 108, 147);
 }
-.container .citation span{
+
+.container .citation span {
     font-size: 15px;
 }
-.container .citation div{
+
+.container .citation div {
     width: 100%;
     background-color: rgb(240, 240, 240);
     padding: 10px;
@@ -146,32 +144,38 @@
     line-height: 28px;
     font-weight: 200;
 }
+
 @media screen and (max-width: 768px) {
-    .container h2{
+    .container h2 {
         font-size: 25px;
         color: rgb(30, 108, 147);
     }
-    .container .nav{
+
+    .container .nav {
         width: 90%;
         margin: 0 auto;
         display: block;
         line-height: 30px;
     }
-    .container .nav a{
+
+    .container .nav a {
         margin: 0 10px;
     }
-    .container .jieshao{
+
+    .container .jieshao {
         width: 90%;
         margin: 0 auto;
         margin-top: 20px;
         display: block;
     }
-    .container .menu{
+
+    .container .menu {
         width: 95%;
         margin: 0 auto;
         margin-top: 80px;
     }
-    .container .menu a{
+
+    .container .menu a {
         display: inline-block;
         width: 37%;
         margin: 0 10px;
@@ -179,15 +183,17 @@
         background-color: rgb(30, 108, 147);
         color: white;
         text-decoration: none;
-        padding:8px 10px;
+        padding: 8px 10px;
         border-radius: 5px;
     }
-    .container .banner{
+
+    .container .banner {
         width: 100%;
         margin: 0 auto;
         margin-top: 80px;
     }
-    .container .citation{
+
+    .container .citation {
         width: 100%;
         margin: 0 auto;
         margin-top: 50px;
