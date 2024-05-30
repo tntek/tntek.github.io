@@ -89,7 +89,7 @@
     
     /* 你可以移除width: 100%;因为<p>标签本身就是块级元素，会自动占满容器的宽度 */
 }
-.content-container {
+.container {
     max-width: 1100px; /* 容器的最大宽度，确保在较小屏幕上的适应性 */
     margin: 0 auto; /* 水平居中对齐 */
     margin-top: 20px; /* 顶部外边距 */
@@ -99,16 +99,11 @@
     font-size: 25px;
 }
 
-/* 上一个段落样式 */
-.previous-paragraph {
-    margin-bottom: 5px;  /* 减少上一个段落的底部外边距 */
-}
-
 /* 标题样式 */
 .title {
     text-align: center; /* 标题居中对齐 */
     font-size: 25px; /* 标题文字大小 */
-    margin-top: 10px; /* 标题顶部外边距 */
+    margin-top: 10px; /* 顶部外边距 */
     margin-bottom: 20px; /* 标题底部外边距 */
 }
 
