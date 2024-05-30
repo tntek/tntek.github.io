@@ -98,6 +98,48 @@
     width: 100%; /* 确保图片宽度不会超过其容器 */
     height: auto; /* 高度自动调整，维持宽高比 */
 }
+/* 使整体有灰色背景 */
+.container {
+    background-color: #f0f0f0; /* 灰色背景 */
+    padding: 20px; /* 内边距 */
+}
+
+/* 使内容居中 */
+.content {
+    max-width: 1400px; /* 内容最大宽度 */
+    margin: auto; /* 居中对齐 */
+    text-align: center; /* 内容居中对齐 */
+}
+
+/* 标题样式 */
+.title {
+    font-size: 24px; /* 标题文字大小 */
+    margin-bottom: 20px; /* 标题底部外边距 */
+}
+
+/* 图片容器样式 */
+.image-container {
+    text-align: center; /* 图片居中对齐 */
+    margin: auto; /* 水平居中 */
+    margin-bottom: 20px; /* 图片底部外边距 */
+    padding: 0 20px; /* 图片容器左右内边距 */
+}
+
+/* 图片样式 */
+.image-container img {
+    max-width: 100%; /* 确保图片宽度不会超过容器 */
+    height: auto; /* 高度自动调整，维持宽高比 */
+}
+
+/* 图片描述样式 */
+.image-description {
+    text-align: justify; /* 文字左右对齐 */
+    hyphens: auto; /* 自动添加连字符 */
+    font-size: 16px; /* 描述文字大小 */
+    color: #333; /* 描述文字颜色 */
+    margin-top: 10px; /* 描述顶部外边距 */
+    padding: 0 20px; /* 描述文字左右内边距 */
+}
 .container .citation{
     width: 1350px;
     margin: 0 auto;
