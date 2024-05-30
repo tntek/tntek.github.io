@@ -137,7 +137,7 @@
 }
 
 .container .citation div {
-    width: 100%;
+   max-width: 1100px;
     background-color: rgb(240, 240, 240);
     padding: 10px;
     margin-top: 10px;
