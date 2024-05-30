@@ -102,7 +102,7 @@
 .title {
     text-align: center; /* 标题居中对齐 */
     font-size: 25px; /* 标题文字大小 */
-     margin-top: 20px; /* 顶部外边距 */
+     margin-top: 10px; /* 顶部外边距 */
     margin-bottom: 20px; /* 标题底部外边距 */
     
 }
