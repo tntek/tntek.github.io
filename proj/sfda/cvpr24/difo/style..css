@@ -98,15 +98,15 @@
     width: 100%; /* 确保图片宽度不会超过其容器 */
     height: auto; /* 高度自动调整，维持宽高比 */
 }
-/* 主容器背景色设置 */
+/* /* 主容器背景色设置 */
 .main-container {
     padding: 20px; /* 主容器内边距 */
     background-color: white; /* 主容器背景设为白色，这样其它部分不会受影响 */
 }
-
+ */
 /* 使内容容器有灰色背景 */
 .content-container {
-    background-color: #f0f0f0; /* 灰色背景 */
+/*     background-color: #f0f0f0; /* 灰色背景  */
     padding: 20px; /* 内容容器内边距 */
     margin: 0 auto; /* 内容容器居中对齐 */
     max-width: 800px; /* 内容容器最大宽度 */
