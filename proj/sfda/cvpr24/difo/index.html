@@ -42,6 +42,19 @@ ViL model by maximizing the mutual information with the target model in a prompt
 the knowledge of this customized ViL model to the target model. For more fine-grained and reliable distillation, we
 further introduce two effective regularization terms, namely most-likely category encouragement and predictive consistency. Extensive experiments show that DIFO significantly
 outperforms the state-of-the-art alternatives.</p>
+    <div class="container">
+        <div class="content">
+            <h1 class="title">DIFO</h1>
+                <div class="image-container">
+                    <img src="file/your-image.jpg" alt="Description of the image">
+                        <p class="image-description">
+                            The process involves two alternating steps. First, we perform (a) task-specific customization of a ViL model through task-specific prompt learning (LTsc).
+                             This is achieved under soft predictive guidance using mutual information maximization. Second, we undertake (b) memory-aware knowledge adaptation, 
+                            incorporating two regularizations: most-likely category encouragement (LMCE) predicted by our dynamic memory-aware predictor, 
+                            along with the typical predictive consistency (LPC). These regularizations are designed to facilitate a coarse-to-fine adaptation.</p>
+        </div>
+    </div>
+</div>
         <div class="image-container">
             <img src="file/poster.png" alt="Method">
         </div>
