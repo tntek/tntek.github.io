@@ -72,16 +72,6 @@
     border: 1px solid white;
     box-shadow: 0px 1px 10px gray;
 }
-/* .container .Abstract{
-    width: 1400px;
-    margin: 0 auto;
-    margin-top: 80px;
-    text-align: left;
-}
-.container .Abstract p{
-    width: 100%;
-    
-} */
 .container .Abstract{
     max-width: 1100px; /* 容器的最大宽度风险，确保在较小屏幕上的适应性 */
     margin: 0 auto; /* 水平居中对齐 */
@@ -93,7 +83,9 @@
 
 .container .Abstract p{
     font-size: 20px;
+    text-align: justify;
     hyphens: auto;
+    
     /* 你可以移除width: 100%;因为<p>标签本身就是块级元素，会自动占满容器的宽度 */
 }
 .image-container {
