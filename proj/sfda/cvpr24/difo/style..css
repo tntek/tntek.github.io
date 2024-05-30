@@ -93,6 +93,7 @@
 
 .container .Abstract p{
     font-size: 20px;
+    hyphens: auto;
     /* 你可以移除width: 100%;因为<p>标签本身就是块级元素，会自动占满容器的宽度 */
 }
 .image-container {
