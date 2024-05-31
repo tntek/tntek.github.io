@@ -95,25 +95,29 @@
     /* 你可以移除width: 100%;因为<p>标签本身就是块级元素，会自动占满容器的宽度 */
 }
 .content h1.title {
-    text-align: center;
-    color: rgb(30, 108, 147);
-    margin-bottom: 20px;
+    text-align: center; /* 标题居中对齐 */
+    font-size: 25px; /* 标题文字大小 */
+    margin-top: 10px; /* 顶部外边距 */
+    margin-bottom: 20px; /* 标题底部外边距 */
 }
 
 .image-container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
+    text-align: center; /* 使图片居中对齐 */
+    margin-top: 20px; /* 图片顶部外边距 */
+}
+.image-container img {
+    max-width: 1400px; /* 设置图片的最大宽度 */
+    width: 100%; /* 确保图片宽度不会超过其容器 */
+    height: auto; /* 高度自动调整，维持宽高比 */
 }
 
 .image-wrapper {
-    width: 100%;
-    max-width: 800px;
-    margin-bottom: 20px;
+    text-align: center; /* 使图片居中对齐 */
+    margin-top: 20px; /* 图片顶部外边距 */
 }
 
 .image-wrapper img {
+    max-width: 1400px; /* 设置图片的最大宽度 */
     max-width: 100%;
     height: auto;
 }
@@ -121,7 +125,7 @@
 .image-description,
 .image-caption {
     margin-top: 10px;
-    font-size: 14px;
+    font-size: 16px;
     text-align: center;
 }
 
