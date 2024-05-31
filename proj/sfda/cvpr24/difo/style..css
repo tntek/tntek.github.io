@@ -121,55 +121,7 @@
     font-size: 16px; /* 描述文字大小 */
     color: #333; /* 描述文字颜色 */
 }
-/* 图片容器样式 */
-.result-container {
-    text-align: center;
-    margin-top: 20px;
-}
 
-.result-container img {
-    max-width: 100%;
-    height: auto;
-}
-
-.result-container .image-wrapper {
-    position: relative;
-    margin-bottom: 20px;
-}
-
-.result-container .image-caption {
-    margin-top: 10px;
-    font-size: 16px;
-    font-weight: bold;
-}
-
-.result-container .image-description {
-    margin-top: 10px;
-    font-size: 14px;
-}
-
-/* 两张图片在同一行样式 */
-.two-images-wrapper {
-    display: flex;
-    justify-content: space-between; /* 两张图片左右对齐 */
-    align-items: flex-start; /* 图片顶部对齐 */
-    flex-wrap: wrap;  /* 保证在小屏幕下也能良好显示 */
-}
-
-.two-images-wrapper .image-wrapper {
-    flex: 1;
-    margin: 0 10px; /* 图片之间的间距 */
-}
-
-/* 左边图片的样式 */
-.two-images-wrapper .first-image-wrapper {
-    margin-right: 10px;
-}
-
-/* 右边图片的样式 */
-.two-images-wrapper .second-image-wrapper {
-    margin-left: 10px;
-}
 
 .container .citation {
     width: 1350px;
