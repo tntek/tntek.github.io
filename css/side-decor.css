@@ -1,0 +1,74 @@
+/* ============================================================
+   两侧科学感装饰（在宽屏两侧空白处显示）
+   色调：沿用实验室主色 海青绿 #0abead / 浅蓝 #04c3ff，点缀琥珀 #f57f17
+   纹理：神经网络/图谱节点（pattern），体现科研严谨与 AI 实验室气质
+   说明：宽度随视口自适应（8vw，恒小于内容两侧的 10% 留白），故在所有
+         ≥568px 的屏幕都能显示且不压正文；仅手机窄屏隐藏。
+   ============================================================ */
+
+.side-decor {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    width: 8vw;            /* 随视口缩放，恒小于两侧 10% 留白，绝不压正文 */
+    max-width: 200px;      /* 超宽屏上限，避免过宽 */
+    z-index: 0;
+    pointer-events: none;
+    overflow: hidden;
+}
+
+/* 左侧：由外缘向中心淡出，避免与正文相接生硬 */
+.side-decor-left {
+    left: -1px;
+    background: linear-gradient(to right,
+        rgba(10, 190, 173, 0.20),
+        rgba(10, 190, 173, 0.06) 60%,
+        rgba(10, 190, 173, 0));
+}
+
+/* 右侧：镜像 */
+.side-decor-right {
+    right: -1px;
+    background: linear-gradient(to left,
+        rgba(10, 190, 173, 0.20),
+        rgba(10, 190, 173, 0.06) 60%,
+        rgba(10, 190, 173, 0));
+}
+
+/* 节点纹理图层，整体透明度略提，保证在浅色分区背景带上仍清晰可辨 */
+.side-decor-svg {
+    display: block;
+    width: 100%;
+    height: 100%;
+    opacity: 0.72;
+}
+
+/* 内侧一条极淡的分隔线，给装饰一个“边界感/结构感”，呼应科研的严谨 */
+.side-decor-left::after,
+.side-decor-right::after {
+    content: "";
+    position: absolute;
+    top: 8%;
+    bottom: 8%;
+    width: 1px;
+    background: linear-gradient(to bottom,
+        rgba(10, 190, 173, 0),
+        rgba(10, 190, 173, 0.32),
+        rgba(10, 190, 173, 0));
+}
+
+.side-decor-left::after {
+    right: 0;
+}
+
+.side-decor-right::after {
+    left: 0;
+}
+
+/* 仅在手机窄屏（≤568px，站点内容在此区间收紧）隐藏，保持原布局；
+   其余所有宽度（含应用内预览面板）均显示两侧装饰。 */
+@media (max-width: 568px) {
+    .side-decor {
+        display: none;
+    }
+}

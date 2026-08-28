@@ -1,0 +1,107 @@
+.App {
+    color: #1f2937;                 
+    background: #f7f9fb;            
+    min-height: 100vh;
+}
+
+.header {
+    background-color: #0e3b44;        
+    border-bottom: 1px solid rgba(255, 255, 255, 0.10);
+    box-shadow: 0 2px 10px rgba(14, 59, 68, 0.18);
+}
+
+.header-brand {
+    font-size: 26px;                  
+    font-weight: 700;
+    color: #ffffff;
+    letter-spacing: 0.5px;
+    position: absolute;               
+    left: 28px;                       
+    top: 50%;
+    transform: translateY(-50%);
+    line-height: 1;
+    white-space: nowrap;
+    z-index: 2;
+}
+
+.header-brand-lab {
+    color: #04c3ff;                   
+}
+
+.header-container {
+    justify-content: flex-start;
+}
+
+.header-parent {
+    position: relative;               
+    width: 100%;
+    max-width: 1340px;                
+    margin-left: max(24px, calc((100% - 1340px) / 2));  
+    padding: 0 28px;                  
+    box-sizing: border-box;
+    justify-content: center;          
+}
+
+.header-option {
+    position: relative;
+    font-size: 100%;
+    cursor: pointer;
+    font-weight: 500;
+    letter-spacing: 0.3px;
+    color: #cfe6eb !important;        
+    padding-bottom: 6px;
+    transition: color 0.2s ease;
+}
+
+.header-option a {
+    color: inherit !important;        
+    text-decoration: none;
+}
+
+.header-option:hover {
+    color: #04c3ff !important;        
+}
+
+.selected-header-option {
+    color: #ffffff !important;
+    font-weight: 700;
+}
+
+.header-option::after,
+.selected-header-option::after {
+    content: none;
+}
+
+.lab-container {
+    max-width: 1340px;               
+    margin: 0 auto;
+    padding: 0 28px;
+    background: #ffffff;             
+    border: 1px solid #e9eef2;       
+    box-shadow: 0 1px 4px rgba(15, 23, 42, 0.05);  
+}
+
+#News,
+#Publications,
+[id="Previous Members"],
+#Gallery {
+    background: #f6f8fa;            
+}
+
+#People,
+#Positions {
+    background: #ffffff;
+}
+
+#News,
+#Publications,
+#People,
+[id="Previous Members"],
+#Positions,
+#Gallery {
+    padding: 56px 8px;
+}
+
+#Positions a[href^="mailto:"] {
+    color: #0abead;                 
+}
