@@ -1,45 +1,102 @@
+
+
+:root {
+    --upl-theme: #b509ac;
+    --upl-text: #000;
+    --upl-text-light: #828282;
+    --upl-divider: rgba(0, 0, 0, 0.1);
+    --upl-bg: #fff;
+    --upl-card: #fff;
+    --upl-header-h: 88px;
+}
+
 .App {
-    color: #1f2937;                 
-    background: #f7f9fb;            
+    color: var(--upl-text);
+    background: var(--upl-bg);
     min-height: 100vh;
+    
+    padding-top: var(--upl-header-h);
+}
+
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: var(--upl-header-h);
+}
+
+h1, h2, h3, h4, h5, h6 {
+    scroll-margin-top: var(--upl-header-h);
+}
+
+#home, #news, #publications, #people, #previous-members, #positions, #gallery {
+    scroll-margin-top: var(--upl-header-h);
+}
+
+a {
+    color: var(--upl-theme);
+}
+
+a:hover {
+    color: var(--upl-theme);
+    text-decoration: underline;
 }
 
 .header {
-    background-color: #0e3b44;        
-    border-bottom: 1px solid rgba(255, 255, 255, 0.10);
-    box-shadow: 0 2px 10px rgba(14, 59, 68, 0.18);
-}
-
-.header-brand {
-    font-size: 26px;                  
-    font-weight: 700;
-    color: #ffffff;
-    letter-spacing: 0.5px;
-    position: absolute;               
-    left: 28px;                       
-    top: 50%;
-    transform: translateY(-50%);
-    line-height: 1;
-    white-space: nowrap;
-    z-index: 2;
-}
-
-.header-brand-lab {
-    color: #04c3ff;                   
+    background: #fff;
+    border-bottom: 1px solid var(--upl-divider);
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.06);
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    height: var(--upl-header-h);
+    z-index: 1030;
+    display: flex;
+    align-items: center;
+    padding: 0;
 }
 
 .header-container {
     justify-content: flex-start;
+    width: 100%;
 }
 
 .header-parent {
-    position: relative;               
+    position: relative;
     width: 100%;
-    max-width: 1340px;                
-    margin-left: max(24px, calc((100% - 1340px) / 2));  
-    padding: 0 28px;                  
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 0 15px;
     box-sizing: border-box;
-    justify-content: center;          
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.header-brand {
+    position: static;
+    left: auto;
+    top: auto;
+    transform: none;
+    font-size: 24px;
+    font-weight: 700;
+    color: #000;
+    letter-spacing: 0.3px;
+    line-height: 1;
+    white-space: nowrap;
+    z-index: auto;
+    margin-right: 24px;
+}
+
+.header-brand-lab {
+    color: var(--upl-theme);
+}
+
+.header-options {
+    margin-left: auto;
+    display: flex;
+    align-items: center;
+    gap: 22px;
 }
 
 .header-option {
@@ -48,23 +105,30 @@
     cursor: pointer;
     font-weight: 500;
     letter-spacing: 0.3px;
-    color: #cfe6eb !important;        
+    color: #000 !important;
     padding-bottom: 6px;
-    transition: color 0.2s ease;
+    border-bottom: 2px solid transparent;
+    transition: color 0.2s ease, border-color 0.2s ease;
 }
 
 .header-option a {
-    color: inherit !important;        
+    color: inherit !important;
+    text-decoration: none;
+}
+
+.header-option a:hover {
     text-decoration: none;
 }
 
 .header-option:hover {
-    color: #04c3ff !important;        
+    color: var(--upl-theme) !important;
+    border-bottom-color: var(--upl-theme);
 }
 
 .selected-header-option {
-    color: #ffffff !important;
+    color: var(--upl-theme) !important;
     font-weight: 700;
+    border-bottom-color: var(--upl-theme);
 }
 
 .header-option::after,
@@ -73,35 +137,357 @@
 }
 
 .lab-container {
-    max-width: 1340px;               
+    max-width: 1280px;
     margin: 0 auto;
-    padding: 0 28px;
-    background: #ffffff;             
-    border: 1px solid #e9eef2;       
-    box-shadow: 0 1px 4px rgba(15, 23, 42, 0.05);  
+    padding: 0 15px;
+    background: transparent;
+    border: none;
+    box-shadow: none;
 }
 
-#News,
-#Publications,
-[id="Previous Members"],
-#Gallery {
-    background: #f6f8fa;            
+.lab-container.single-page #news,
+.lab-container.single-page #publications,
+.lab-container.single-page #people,
+.lab-container.single-page #previous-members,
+.lab-container.single-page #positions,
+.lab-container.single-page #gallery {
+    border-top: 1px solid #d8dde3;
 }
 
-#People,
-#Positions {
-    background: #ffffff;
+#news,
+#publications,
+#people,
+#previous-members,
+#positions,
+#gallery {
+    background: transparent;
+    padding: 28px 0;
 }
 
-#News,
-#Publications,
-#People,
-[id="Previous Members"],
-#Positions,
-#Gallery {
-    padding: 56px 8px;
+.profile-container {
+    margin-top: 0;
+    padding: 28px 0 24px;
+}
+
+.profile-parent {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 48px;
+}
+
+.profile-parent > div:first-child {
+    order: 2;
+    margin-left: auto;
+}
+
+.profile-parent .profile-details {
+    order: 1;
+    flex: 1;
+    min-width: 280px;
+}
+
+.profile-picture {
+    width: 200px !important;
+    height: 200px !important;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 4px solid #fff;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.12);
+}
+
+.profile-details-role h1 {
+    font-size: 2.2rem;
+    font-weight: 700;
+    color: #000;
+    margin: 0 0 12px;
+    line-height: 1.2;
+}
+
+.profile-role-tagline {
+    font-size: 1.05rem;
+    line-height: 1.7;
+    color: #333;
+}
+
+.profile-role-tagline a {
+    color: var(--upl-theme);
+}
+
+.screen-heading {
+    color: #000;
+    font-size: 2rem;
+    font-weight: 600;
+    text-align: left;
+    margin: 0 0 18px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid var(--upl-divider);
+}
+
+.screen-heading.page-heading {
+    color: #000;
+    font-size: 2.75rem;
+    font-weight: 700;
+    text-align: center;
+    padding: 4px 0 16px;
+    margin: 0 0 24px;
+    border-bottom: 1px solid var(--upl-divider);
+}
+
+@media (max-width: 768px) {
+    .screen-heading.page-heading {
+        font-size: 2rem;
+    }
+}
+
+.heading-container {
+    margin-bottom: 8px;
+}
+
+.heading-seperator {
+    display: none;
+}
+
+.news-scroll {
+    max-height: 24vw;
+    min-height: 220px;
+    overflow-y: auto;
+    margin-bottom: 8px;
+}
+
+table.news-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 1rem;
+}
+
+table.news-table tr {
+    border-bottom: 1px solid var(--upl-divider);
+}
+
+table.news-table tr:last-child {
+    border-bottom: none;
+}
+
+table.news-table th {
+    width: 132px;
+    min-width: 112px;
+    text-align: left;
+    vertical-align: top;
+    font-weight: 700;
+    white-space: nowrap;
+    color: #000;
+    padding: 10px 18px 10px 0;
+}
+
+table.news-table td {
+    vertical-align: top;
+    color: #333;
+    padding: 10px 0;
+}
+
+table.news-table .news-flag {
+    display: block;
+    font-size: 0.72rem;
+    font-weight: 700;
+    letter-spacing: 0.6px;
+    color: var(--upl-theme);
+    margin-top: 3px;
+}
+
+.publication-content {
+    padding-bottom: 24px;
+    margin-bottom: 24px;
+    border-bottom: 1px solid var(--upl-divider);
+}
+
+.publication-content:last-child {
+    border-bottom: none;
+    margin-bottom: 8px;
+}
+
+.publication-title {
+    font-weight: 700;
+    line-height: 1.45;
+    color: #000;
+}
+
+.publication-title:hover {
+    color: var(--upl-theme);
+    text-decoration: none;
+}
+
+.publication-autors {
+    color: #000;
+    line-height: 1.55;
+    margin: 7px 0 3px;
+}
+
+.publication-autors strong {
+    color: #000;
+    font-weight: 700;
+}
+
+.publication-journal {
+    color: #000;
+    font-style: italic;
+}
+
+.publication-introduction {
+    margin-bottom: 26px;
+}
+
+.ins-ico {
+    background: var(--upl-theme);
+    color: #fff;
+    border-radius: 3px;
+    padding: 3px 10px;
+    font-size: 13px;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    display: inline-block;
+    min-width: 54px;
+    text-align: center;
+    line-height: 1.7;
+}
+
+.link-ico {
+    border: 1px solid #000;
+    border-radius: 3px;
+    padding: 4px 16px;
+    margin: 0 8px 0 0;
+    color: #000;
+    background: transparent;
+    font-size: 13px;
+    letter-spacing: 0.3px;
+    transition: all 0.18s ease;
+    display: inline-block;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.link-ico.bib-link {
+    cursor: pointer;
+}
+
+.link-ico:hover {
+    border-color: var(--upl-theme);
+    color: var(--upl-theme);
+    background: transparent;
+    text-decoration: none;
 }
 
 #Positions a[href^="mailto:"] {
-    color: #0abead;                 
+    color: var(--upl-theme);
+}
+
+.item-content {
+    text-align: center;
+}
+
+.item-content img.rounded-circle {
+    width: 130px;
+    height: 130px;
+    object-fit: cover;
+    border-radius: 50% !important;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s ease;
+}
+
+.item-content img.rounded-circle:hover {
+    transform: scale(1.05);
+}
+
+.item-content p {
+    margin-top: 10px;
+    font-size: 0.95rem;
+}
+
+.item-content p a {
+    color: var(--upl-theme);
+}
+
+#tagsList {
+    position: relative;
+    height: 300px;
+    margin: 10px auto 24px;
+    overflow: hidden;
+}
+
+#tagsList a {
+    position: absolute;
+    left: 0;
+    top: 0;
+    color: #ffffff;
+    text-decoration: none;
+    cursor: pointer;
+    white-space: nowrap;
+    font-weight: 600;
+    font-family: Arial, Helvetica, sans-serif;
+    padding: 3px 6px;
+    transition: color 0.15s ease;
+}
+
+#tagsList a:hover {
+    color: #ffffff;
+}
+
+.graduated_s ul {
+    list-style: none;
+    padding-left: 0;
+    margin: 0;
+}
+
+.graduated_s li {
+    padding: 12px 0;
+    border-bottom: 1px solid var(--upl-divider);
+    line-height: 1.7;
+    color: #333;
+}
+
+.graduated_s li strong {
+    color: var(--upl-theme);
+    font-weight: 600;
+}
+
+.gal-parent img {
+    border-radius: 8px;
+}
+
+.galStyle {
+    height: 860px !important;
+    object-fit: contain;
+    background-color: #fff;
+}
+
+.footer-container {
+    text-align: center;
+    padding: 40px 0 32px;
+    margin-top: 56px;
+    border-top: 1px solid var(--upl-divider);
+    font-size: 0.9rem;
+}
+
+.footer-parent img {
+    max-width: 100%;
+    height: auto;
+}
+
+.footer-parent::after {
+    content: "© Copyright 2026 ARISE Lab · University of Shanghai for Science and Technology";
+    display: block;
+    margin-top: 18px;
+    color: var(--upl-text-light);
+    font-size: 0.9rem;
+    letter-spacing: 0.2px;
+}
+
+#home .footer-container {
+    border-top: none;
+    margin-top: 0;
+    padding: 8px 0 0;
+}
+
+#home .footer-parent::after {
+    content: none;
 }

@@ -1,0 +1,1777 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <style type="text/css">
+        :root,
+        :host {
+            --fa-font-solid: normal 900 1em/1 "Font Awesome 6 Solid";
+            --fa-font-regular: normal 400 1em/1 "Font Awesome 6 Regular";
+            --fa-font-light: normal 300 1em/1 "Font Awesome 6 Light";
+            --fa-font-thin: normal 100 1em/1 "Font Awesome 6 Thin";
+            --fa-font-duotone: normal 900 1em/1 "Font Awesome 6 Duotone";
+            --fa-font-brands: normal 400 1em/1 "Font Awesome 6 Brands";
+        }
+
+        svg:not(:root).svg-inline--fa,
+        svg:not(:host).svg-inline--fa {
+            overflow: visible;
+            box-sizing: content-box;
+        }
+
+        .svg-inline--fa {
+            display: var(--fa-display, inline-block);
+            height: 1em;
+            overflow: visible;
+            vertical-align: -0.125em;
+        }
+
+        .svg-inline--fa.fa-2xs {
+            vertical-align: 0.1em;
+        }
+
+        .svg-inline--fa.fa-xs {
+            vertical-align: 0em;
+        }
+
+        .svg-inline--fa.fa-sm {
+            vertical-align: -0.0714285705em;
+        }
+
+        .svg-inline--fa.fa-lg {
+            vertical-align: -0.2em;
+        }
+
+        .svg-inline--fa.fa-xl {
+            vertical-align: -0.25em;
+        }
+
+        .svg-inline--fa.fa-2xl {
+            vertical-align: -0.3125em;
+        }
+
+        .svg-inline--fa.fa-pull-left {
+            margin-right: var(--fa-pull-margin, 0.3em);
+            width: auto;
+        }
+
+        .svg-inline--fa.fa-pull-right {
+            margin-left: var(--fa-pull-margin, 0.3em);
+            width: auto;
+        }
+
+        .svg-inline--fa.fa-li {
+            width: var(--fa-li-width, 2em);
+            top: 0.25em;
+        }
+
+        .svg-inline--fa.fa-fw {
+            width: var(--fa-fw-width, 1.25em);
+        }
+            /* font-size: 2em;
+            line-height: 0.03125em;
+            vertical-align: -0.1875em;
+        } */
+
+        .fa-fw {
+            text-align: center;
+            width: 1.25em;
+        }
+
+        .fa-ul {
+            list-style-type: none;
+            margin-left: var(--fa-li-margin, 2.5em);
+            padding-left: 0;
+        }
+
+        .fa-ul>li {
+            position: relative;
+        }
+
+        .fa-li {
+            left: calc(var(--fa-li-width, 2em) * -1);
+            position: absolute;
+            text-align: center;
+            width: var(--fa-li-width, 2em);
+            line-height: inherit;
+        }
+
+        .fa-border {
+            border-color: var(--fa-border-color, #eee);
+            border-radius: var(--fa-border-radius, 0.1em);
+            border-style: var(--fa-border-style, solid);
+            border-width: var(--fa-border-width, 0.08em);
+            padding: var(--fa-border-padding, 0.2em 0.25em 0.15em);
+        }
+
+        .fa-pull-left {
+            float: left;
+            margin-right: var(--fa-pull-margin, 0.3em);
+        }
+
+        .fa-pull-right {
+            float: right;
+            margin-left: var(--fa-pull-margin, 0.3em);
+        }
+
+        .fa-beat {
+            -webkit-animation-name: fa-beat;
+            animation-name: fa-beat;
+            -webkit-animation-delay: var(--fa-animation-delay, 0);
+            animation-delay: var(--fa-animation-delay, 0);
+            -webkit-animation-direction: var(--fa-animation-direction, normal);
+            animation-direction: var(--fa-animation-direction, normal);
+            -webkit-animation-duration: var(--fa-animation-duration, 1s);
+            animation-duration: var(--fa-animation-duration, 1s);
+            -webkit-animation-iteration-count: var(--fa-animation-iteration-count, infinite);
+            animation-iteration-count: var(--fa-animation-iteration-count, infinite);
+            -webkit-animation-timing-function: var(--fa-animation-timing, ease-in-out);
+            animation-timing-function: var(--fa-animation-timing, ease-in-out);
+        }
+
+        .fa-bounce {
+            -webkit-animation-name: fa-bounce;
+            animation-name: fa-bounce;
+            -webkit-animation-delay: var(--fa-animation-delay, 0);
+            animation-delay: var(--fa-animation-delay, 0);
+            -webkit-animation-direction: var(--fa-animation-direction, normal);
+            animation-direction: var(--fa-animation-direction, normal);
+            -webkit-animation-duration: var(--fa-animation-duration, 1s);
+            animation-duration: var(--fa-animation-duration, 1s);
+            -webkit-animation-iteration-count: var(--fa-animation-iteration-count, infinite);
+            animation-iteration-count: var(--fa-animation-iteration-count, infinite);
+            -webkit-animation-timing-function: var(--fa-animation-timing, cubic-bezier(0.28, 0.84, 0.42, 1));
+            animation-timing-function: var(--fa-animation-timing, cubic-bezier(0.28, 0.84, 0.42, 1));
+        }
+
+        .fa-fade {
+            -webkit-animation-name: fa-fade;
+            animation-name: fa-fade;
+            -webkit-animation-delay: var(--fa-animation-delay, 0);
+            animation-delay: var(--fa-animation-delay, 0);
+            -webkit-animation-direction: var(--fa-animation-direction, normal);
+            animation-direction: var(--fa-animation-direction, normal);
+            -webkit-animation-duration: var(--fa-animation-duration, 1s);
+            animation-duration: var(--fa-animation-duration, 1s);
+            -webkit-animation-iteration-count: var(--fa-animation-iteration-count, infinite);
+            animation-iteration-count: var(--fa-animation-iteration-count, infinite);
+            -webkit-animation-timing-function: var(--fa-animation-timing, cubic-bezier(0.4, 0, 0.6, 1));
+            animation-timing-function: var(--fa-animation-timing, cubic-bezier(0.4, 0, 0.6, 1));
+        }
+
+        .fa-beat-fade {
+            -webkit-animation-name: fa-beat-fade;
+            animation-name: fa-beat-fade;
+            -webkit-animation-delay: var(--fa-animation-delay, 0);
+            animation-delay: var(--fa-animation-delay, 0);
+            -webkit-animation-direction: var(--fa-animation-direction, normal);
+            animation-direction: var(--fa-animation-direction, normal);
+            -webkit-animation-duration: var(--fa-animation-duration, 1s);
+            animation-duration: var(--fa-animation-duration, 1s);
+            -webkit-animation-iteration-count: var(--fa-animation-iteration-count, infinite);
+            animation-iteration-count: var(--fa-animation-iteration-count, infinite);
+            -webkit-animation-timing-function: var(--fa-animation-timing, cubic-bezier(0.4, 0, 0.6, 1));
+            animation-timing-function: var(--fa-animation-timing, cubic-bezier(0.4, 0, 0.6, 1));
+        }
+
+        .fa-flip {
+            -webkit-animation-name: fa-flip;
+            animation-name: fa-flip;
+            -webkit-animation-delay: var(--fa-animation-delay, 0);
+            animation-delay: var(--fa-animation-delay, 0);
+            -webkit-animation-direction: var(--fa-animation-direction, normal);
+            animation-direction: var(--fa-animation-direction, normal);
+            -webkit-animation-duration: var(--fa-animation-duration, 1s);
+            animation-duration: var(--fa-animation-duration, 1s);
+            -webkit-animation-iteration-count: var(--fa-animation-iteration-count, infinite);
+            animation-iteration-count: var(--fa-animation-iteration-count, infinite);
+            -webkit-animation-timing-function: var(--fa-animation-timing, ease-in-out);
+            animation-timing-function: var(--fa-animation-timing, ease-in-out);
+        }
+
+        .fa-shake {
+            -webkit-animation-name: fa-shake;
+            animation-name: fa-shake;
+            -webkit-animation-delay: var(--fa-animation-delay, 0);
+            animation-delay: var(--fa-animation-delay, 0);
+            -webkit-animation-direction: var(--fa-animation-direction, normal);
+            animation-direction: var(--fa-animation-direction, normal);
+            -webkit-animation-duration: var(--fa-animation-duration, 1s);
+            animation-duration: var(--fa-animation-duration, 1s);
+            -webkit-animation-iteration-count: var(--fa-animation-iteration-count, infinite);
+            animation-iteration-count: var(--fa-animation-iteration-count, infinite);
+            -webkit-animation-timing-function: var(--fa-animation-timing, linear);
+            animation-timing-function: var(--fa-animation-timing, linear);
+        }
+
+        .fa-spin {
+            -webkit-animation-name: fa-spin;
+            animation-name: fa-spin;
+            -webkit-animation-delay: var(--fa-animation-delay, 0);
+            animation-delay: var(--fa-animation-delay, 0);
+            -webkit-animation-direction: var(--fa-animation-direction, normal);
+            animation-direction: var(--fa-animation-direction, normal);
+            -webkit-animation-duration: var(--fa-animation-duration, 2s);
+            animation-duration: var(--fa-animation-duration, 2s);
+            -webkit-animation-iteration-count: var(--fa-animation-iteration-count, infinite);
+            animation-iteration-count: var(--fa-animation-iteration-count, infinite);
+            -webkit-animation-timing-function: var(--fa-animation-timing, linear);
+            animation-timing-function: var(--fa-animation-timing, linear);
+        }
+
+        .fa-spin-reverse {
+            --fa-animation-direction: reverse;
+        }
+
+        .fa-pulse,
+        .fa-spin-pulse {
+            -webkit-animation-name: fa-spin;
+            animation-name: fa-spin;
+            -webkit-animation-direction: var(--fa-animation-direction, normal);
+            animation-direction: var(--fa-animation-direction, normal);
+            -webkit-animation-duration: var(--fa-animation-duration, 1s);
+            animation-duration: var(--fa-animation-duration, 1s);
+            -webkit-animation-iteration-count: var(--fa-animation-iteration-count, infinite);
+            animation-iteration-count: var(--fa-animation-iteration-count, infinite);
+            -webkit-animation-timing-function: var(--fa-animation-timing, steps(8));
+            animation-timing-function: var(--fa-animation-timing, steps(8));
+        }
+
+        @media (prefers-reduced-motion: reduce) {
+
+            .fa-beat,
+            .fa-bounce,
+            .fa-fade,
+            .fa-beat-fade,
+            .fa-flip,
+            .fa-pulse,
+            .fa-shake,
+            .fa-spin,
+            .fa-spin-pulse {
+                -webkit-animation-delay: -1ms;
+                animation-delay: -1ms;
+                -webkit-animation-duration: 1ms;
+                animation-duration: 1ms;
+                -webkit-animation-iteration-count: 1;
+                animation-iteration-count: 1;
+                transition-delay: 0s;
+                transition-duration: 0s;
+            }
+        }
+
+        @-webkit-keyframes fa-beat {
+
+            0%,
+            90% {
+                -webkit-transform: scale(1);
+                transform: scale(1);
+            }
+
+            45% {
+                -webkit-transform: scale(var(--fa-beat-scale, 1.25));
+                transform: scale(var(--fa-beat-scale, 1.25));
+            }
+        }
+
+        @keyframes fa-beat {
+
+            0%,
+            90% {
+                -webkit-transform: scale(1);
+                transform: scale(1);
+            }
+
+            45% {
+                -webkit-transform: scale(var(--fa-beat-scale, 1.25));
+                transform: scale(var(--fa-beat-scale, 1.25));
+            }
+        }
+
+        @-webkit-keyframes fa-bounce {
+            0% {
+                -webkit-transform: scale(1, 1) translateY(0);
+                transform: scale(1, 1) translateY(0);
+            }
+
+            10% {
+                -webkit-transform: scale(var(--fa-bounce-start-scale-x, 1.1), var(--fa-bounce-start-scale-y, 0.9)) translateY(0);
+                transform: scale(var(--fa-bounce-start-scale-x, 1.1), var(--fa-bounce-start-scale-y, 0.9)) translateY(0);
+            }
+
+            30% {
+                -webkit-transform: scale(var(--fa-bounce-jump-scale-x, 0.9), var(--fa-bounce-jump-scale-y, 1.1)) translateY(var(--fa-bounce-height, -0.5em));
+                transform: scale(var(--fa-bounce-jump-scale-x, 0.9), var(--fa-bounce-jump-scale-y, 1.1)) translateY(var(--fa-bounce-height, -0.5em));
+            }
+
+            50% {
+                -webkit-transform: scale(var(--fa-bounce-land-scale-x, 1.05), var(--fa-bounce-land-scale-y, 0.95)) translateY(0);
+                transform: scale(var(--fa-bounce-land-scale-x, 1.05), var(--fa-bounce-land-scale-y, 0.95)) translateY(0);
+            }
+
+            57% {
+                -webkit-transform: scale(1, 1) translateY(var(--fa-bounce-rebound, -0.125em));
+                transform: scale(1, 1) translateY(var(--fa-bounce-rebound, -0.125em));
+            }
+
+            64% {
+                -webkit-transform: scale(1, 1) translateY(0);
+                transform: scale(1, 1) translateY(0);
+            }
+
+            100% {
+                -webkit-transform: scale(1, 1) translateY(0);
+                transform: scale(1, 1) translateY(0);
+            }
+        }
+
+        @keyframes fa-bounce {
+            0% {
+                -webkit-transform: scale(1, 1) translateY(0);
+                transform: scale(1, 1) translateY(0);
+            }
+
+            10% {
+                -webkit-transform: scale(var(--fa-bounce-start-scale-x, 1.1), var(--fa-bounce-start-scale-y, 0.9)) translateY(0);
+                transform: scale(var(--fa-bounce-start-scale-x, 1.1), var(--fa-bounce-start-scale-y, 0.9)) translateY(0);
+            }
+
+            30% {
+                -webkit-transform: scale(var(--fa-bounce-jump-scale-x, 0.9), var(--fa-bounce-jump-scale-y, 1.1)) translateY(var(--fa-bounce-height, -0.5em));
+                transform: scale(var(--fa-bounce-jump-scale-x, 0.9), var(--fa-bounce-jump-scale-y, 1.1)) translateY(var(--fa-bounce-height, -0.5em));
+            }
+
+            50% {
+                -webkit-transform: scale(var(--fa-bounce-land-scale-x, 1.05), var(--fa-bounce-land-scale-y, 0.95)) translateY(0);
+                transform: scale(var(--fa-bounce-land-scale-x, 1.05), var(--fa-bounce-land-scale-y, 0.95)) translateY(0);
+            }
+
+            57% {
+                -webkit-transform: scale(1, 1) translateY(var(--fa-bounce-rebound, -0.125em));
+                transform: scale(1, 1) translateY(var(--fa-bounce-rebound, -0.125em));
+            }
+
+            64% {
+                -webkit-transform: scale(1, 1) translateY(0);
+                transform: scale(1, 1) translateY(0);
+            }
+
+            100% {
+                -webkit-transform: scale(1, 1) translateY(0);
+                transform: scale(1, 1) translateY(0);
+            }
+        }
+
+        @-webkit-keyframes fa-fade {
+            50% {
+                opacity: var(--fa-fade-opacity, 0.4);
+            }
+        }
+
+        @keyframes fa-fade {
+            50% {
+                opacity: var(--fa-fade-opacity, 0.4);
+            }
+        }
+
+        @-webkit-keyframes fa-beat-fade {
+
+            0%,
+            100% {
+                opacity: var(--fa-beat-fade-opacity, 0.4);
+                -webkit-transform: scale(1);
+                transform: scale(1);
+            }
+
+            50% {
+                opacity: 1;
+                -webkit-transform: scale(var(--fa-beat-fade-scale, 1.125));
+                transform: scale(var(--fa-beat-fade-scale, 1.125));
+            }
+        }
+
+        @keyframes fa-beat-fade {
+
+            0%,
+            100% {
+                opacity: var(--fa-beat-fade-opacity, 0.4);
+                -webkit-transform: scale(1);
+                transform: scale(1);
+            }
+
+            50% {
+                opacity: 1;
+                -webkit-transform: scale(var(--fa-beat-fade-scale, 1.125));
+                transform: scale(var(--fa-beat-fade-scale, 1.125));
+            }
+        }
+
+        @-webkit-keyframes fa-flip {
+            50% {
+                -webkit-transform: rotate3d(var(--fa-flip-x, 0), var(--fa-flip-y, 1), var(--fa-flip-z, 0), var(--fa-flip-angle, -180deg));
+                transform: rotate3d(var(--fa-flip-x, 0), var(--fa-flip-y, 1), var(--fa-flip-z, 0), var(--fa-flip-angle, -180deg));
+            }
+        }
+
+        @keyframes fa-flip {
+            50% {
+                -webkit-transform: rotate3d(var(--fa-flip-x, 0), var(--fa-flip-y, 1), var(--fa-flip-z, 0), var(--fa-flip-angle, -180deg));
+                transform: rotate3d(var(--fa-flip-x, 0), var(--fa-flip-y, 1), var(--fa-flip-z, 0), var(--fa-flip-angle, -180deg));
+            }
+        }
+
+        @-webkit-keyframes fa-shake {
+            0% {
+                -webkit-transform: rotate(-15deg);
+                transform: rotate(-15deg);
+            }
+
+            4% {
+                -webkit-transform: rotate(15deg);
+                transform: rotate(15deg);
+            }
+
+            8%,
+            24% {
+                -webkit-transform: rotate(-18deg);
+                transform: rotate(-18deg);
+            }
+
+            12%,
+            28% {
+                -webkit-transform: rotate(18deg);
+                transform: rotate(18deg);
+            }
+
+            16% {
+                -webkit-transform: rotate(-22deg);
+                transform: rotate(-22deg);
+            }
+
+            20% {
+                -webkit-transform: rotate(22deg);
+                transform: rotate(22deg);
+            }
+
+            32% {
+                -webkit-transform: rotate(-12deg);
+                transform: rotate(-12deg);
+            }
+
+            36% {
+                -webkit-transform: rotate(12deg);
+                transform: rotate(12deg);
+            }
+
+            40%,
+            100% {
+                -webkit-transform: rotate(0deg);
+                transform: rotate(0deg);
+            }
+        }
+
+        @keyframes fa-shake {
+            0% {
+                -webkit-transform: rotate(-15deg);
+                transform: rotate(-15deg);
+            }
+
+            4% {
+                -webkit-transform: rotate(15deg);
+                transform: rotate(15deg);
+            }
+
+            8%,
+            24% {
+                -webkit-transform: rotate(-18deg);
+                transform: rotate(-18deg);
+            }
+
+            12%,
+            28% {
+                -webkit-transform: rotate(18deg);
+                transform: rotate(18deg);
+            }
+
+            16% {
+                -webkit-transform: rotate(-22deg);
+                transform: rotate(-22deg);
+            }
+
+            20% {
+                -webkit-transform: rotate(22deg);
+                transform: rotate(22deg);
+            }
+
+            32% {
+                -webkit-transform: rotate(-12deg);
+                transform: rotate(-12deg);
+            }
+
+            36% {
+                -webkit-transform: rotate(12deg);
+                transform: rotate(12deg);
+            }
+
+            40%,
+            100% {
+                -webkit-transform: rotate(0deg);
+                transform: rotate(0deg);
+            }
+        }
+
+        @-webkit-keyframes fa-spin {
+            0% {
+                -webkit-transform: rotate(0deg);
+                transform: rotate(0deg);
+            }
+
+            100% {
+                -webkit-transform: rotate(360deg);
+                transform: rotate(360deg);
+            }
+        }
+
+        @keyframes fa-spin {
+            0% {
+                -webkit-transform: rotate(0deg);
+                transform: rotate(0deg);
+            }
+
+            100% {
+                -webkit-transform: rotate(360deg);
+                transform: rotate(360deg);
+            }
+        }
+
+        .fa-rotate-90 {
+            -webkit-transform: rotate(90deg);
+            transform: rotate(90deg);
+        }
+
+        .fa-rotate-180 {
+            -webkit-transform: rotate(180deg);
+            transform: rotate(180deg);
+        }
+
+        .fa-rotate-270 {
+            -webkit-transform: rotate(270deg);
+            transform: rotate(270deg);
+        }
+
+        .fa-flip-horizontal {
+            -webkit-transform: scale(-1, 1);
+            transform: scale(-1, 1);
+        }
+
+        .fa-flip-vertical {
+            -webkit-transform: scale(1, -1);
+            transform: scale(1, -1);
+        }
+
+        .fa-flip-both,
+        .fa-flip-horizontal.fa-flip-vertical {
+            -webkit-transform: scale(-1, -1);
+            transform: scale(-1, -1);
+        }
+
+        .fa-rotate-by {
+            -webkit-transform: rotate(var(--fa-rotate-angle, none));
+            transform: rotate(var(--fa-rotate-angle, none));
+        }
+
+        .fa-stack {
+            display: inline-block;
+            vertical-align: middle;
+            height: 2em;
+            position: relative;
+            width: 2.5em;
+        }
+
+        .fa-stack-1x,
+        .fa-stack-2x {
+            bottom: 0;
+            left: 0;
+            margin: auto;
+            position: absolute;
+            right: 0;
+            top: 0;
+            z-index: var(--fa-stack-z-index, auto);
+        }
+
+        .svg-inline--fa.fa-stack-1x {
+            height: 1em;
+            width: 1.25em;
+        }
+
+        .svg-inline--fa.fa-stack-2x {
+            height: 2em;
+            width: 2.5em;
+        }
+
+        .fa-inverse {
+            color: var(--fa-inverse, #fff);
+        }
+
+        .sr-only,
+        .fa-sr-only {
+            position: absolute;
+            width: 1px;
+            height: 1px;
+            padding: 0;
+            margin: -1px;
+            overflow: hidden;
+            clip: rect(0, 0, 0, 0);
+            white-space: nowrap;
+            border-width: 0;
+        }
+
+        .sr-only-focusable:not(:focus),
+        .fa-sr-only-focusable:not(:focus) {
+            position: absolute;
+            width: 1px;
+            height: 1px;
+            padding: 0;
+            margin: -1px;
+            overflow: hidden;
+            clip: rect(0, 0, 0, 0);
+            white-space: nowrap;
+            border-width: 0;
+        }
+
+        .svg-inline--fa .fa-primary {
+            fill: var(--fa-primary-color, currentColor);
+            opacity: var(--fa-primary-opacity, 1);
+        }
+
+        .svg-inline--fa .fa-secondary {
+            fill: var(--fa-secondary-color, currentColor);
+            opacity: var(--fa-secondary-opacity, 0.4);
+        }
+
+        .svg-inline--fa.fa-swap-opacity .fa-primary {
+            opacity: var(--fa-secondary-opacity, 0.4);
+        }
+
+        .svg-inline--fa.fa-swap-opacity .fa-secondary {
+            opacity: var(--fa-primary-opacity, 1);
+        }
+
+        .svg-inline--fa mask .fa-primary,
+        .svg-inline--fa mask .fa-secondary {
+            fill: black;
+        }
+
+        .fad.fa-inverse,
+        .fa-duotone.fa-inverse {
+            color: var(--fa-inverse, #fff);
+        }
+    </style>
+    <!-- <link rel="icon" href="photos/tau.ico"> -->
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta name="theme-color" content="#000000">
+    <meta name="description" content="Xiaoxiao&#39;s Lab Web site created using create-react-app">
+    <!-- <link rel="apple-touch-icon" href="https://tea.ece.ubc.ca/logo192.png"> -->
+    <!-- <link rel="manifest" href="https://tea.ece.ubc.ca/manifest.json"> -->
+    <link rel="stylesheet" href="./css/bootstrap.min.css">
+    <link rel="stylesheet" href="./css/font-awesome.min.css">
+    <link rel="stylesheet" href="./css/code.css">
+
+    <link href="./css/mainchunk.css" rel="stylesheet">
+    <link href="./css/enhance.css" rel="stylesheet">
+    <style type="text/css">
+        .styles_typicalWrapper__1_Uvh::after {
+            content: "|";
+            animation: styles_blink__2CKyC 1s infinite step-start;
+        }
+
+        @keyframes styles_blink__2CKyC {
+            50% {
+                opacity: 0;
+            }
+        }
+    </style>
+    <title>ARISE Lab — Publications</title>
+</head>
+<body><noscript>You need to enable JavaScript to run this app.</noscript>
+    <div id="root">
+        <div class="App">
+            <div class="app-heading">
+                <div >
+                    <div class="header">
+                        <div class="header-container">
+                            <div class="header-parent">
+                                <div class="header-hamburger"><svg aria-hidden="true" focusable="false"
+                                        data-prefix="fas" data-icon="bars"
+                                        class="svg-inline--fa fa-bars header-hamburger-bars" role="img"
+                                        xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
+                                        <path fill="currentColor"
+                                            d="M0 96C0 78.33 14.33 64 32 64H416C433.7 64 448 78.33 448 96C448 113.7 433.7 128 416 128H32C14.33 128 0 113.7 0 96zM0 256C0 238.3 14.33 224 32 224H416C433.7 224 448 238.3 448 256C448 273.7 433.7 288 416 288H32C14.33 288 0 273.7 0 256zM416 448H32C14.33 448 0 433.7 0 416C0 398.3 14.33 384 32 384H416C433.7 384 448 398.3 448 416C448 433.7 433.7 448 416 448z">
+                                        </path>
+                                    </svg></div>
+                                <!-- <img src="./photos/tau.svg" class="header-logo" style="height: 110px;" width="110px"> -->
+                                <div class="header-brand">ARISE <span class="header-brand-lab">Lab</span></div>
+                                <div class="header-options">
+                                    <nobr class="header-option header-option-seperator"><a
+                                            href="index.html"><span>Home</span></a></nobr>
+                                    <nobr class="header-option header-option-seperator"><a
+                                            href="news.html"><span>News</span></a></nobr>
+                                    <nobr class="header-option header-option-seperator"><a
+                                            href="publications.html"><span>Publications</span></a></nobr>
+                                    <nobr class="header-option header-option-seperator"><a
+                                            href="people.html"><span>People</span></a></nobr>
+                                    <nobr class="header-option header-option-seperator"><a
+                                            href="previous-members.html"><span>Previous Members</span></a></nobr>
+                                    <nobr class="header-option header-option-seperator"><a
+                                            href="positions.html"><span>Positions</span></a></nobr>
+                                    <nobr class="header-option"><a
+                                            href="gallery.html"><span>Gallery</span></a></nobr>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="parent">
+                <div class="lab-container">
+<div class="publications-container screen-container" id="publications">
+                        <div class="publications-parent">
+                            <div class="heading-container">
+                                <div class="screen-heading page-heading"><span>Recent Publications</span></div>
+                                <div></div>
+                                <div class="heading-seperator">
+                                    <div class="seperator-line">
+                                        <div class="seperator-blob">
+                                            <div></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="publication-introduction">
+                                <p><b>Note</b>: * indicates the corresponding author; <strong>bold font</strong> means the member of ARISE Lab.</p>
+                                <p><a href="https://scholar.google.com.hk/citations?hl=zh-CN&user=8uhkD9QAAAAJ">Full list of
+                                        publications in Google Scholar</a>.</p>
+                            </div>
+
+                            <!-- Paper -->
+                            <div class="row publication-content">
+                                <div class="col-md-2">
+                                    <span class="ins-ico">FSS</span>
+                                </div>
+                                <div class="col-md-10">
+                                    <a class="publication-title" href="">Fuzzy-dependent soft-switched 𝐻∞ load frequency control for heterogeneous power systems with multiple-transmission delays</a>
+                                    <p class="publication-autors del-p"><strong>L. Chen</strong>, <strong>J. Luo</strong>, <strong>S. Tang</strong>, K. Shi, R. Zhang, J. Cheng</p>
+                                    <p class="publication-journal del-p">Fuzzy Sets and Systems</p>
+                                    <p style="margin-top: 10px;">
+                                        <a class="link-ico bib-link">BIB</a>
+                                        <a class="link-ico" href="">PDF</a>
+                                        <a class="link-ico">Project</a>
+                                    </p>
+                                    <div class="code row " style="display: none;" hidden_status="true">
+                                        <figure class="highlight">
+                                            <pre>
+                                                <code>
+<span class="nc">@article</span><span class="p">{</span><span class="nl">chen2026fcpsmd</span><span class="p">,</span>
+<span class="na">  title</span> <span class="p">=</span> <span class="s">{Fuzzy-dependent soft-switched 𝐻∞ load frequency control for heterogeneous power systems with multiple-transmission delays}</span><span class="p">,</span>
+<span class="na">  author</span> <span class="p">=</span> <span class="s">{<strong>Lijuan Chen</strong>, <strong>Jinnan Luo</strong>, <strong>Song Tang</strong>, Kaibo Shi, Ruimei Zhang, Jun Cheng}</span><span class="p">,</span>
+<span class="na">  journal</span> <span class="p">=</span> <span class="s">{Fuzzy Sets and Systems}</span><span class="p">,</span>
+<span class="na">  pages</span> <span class="p">=</span> <span class="s">{110081}</span><span class="p">,</span>
+<span class="na">  year</span> <span class="p">=</span> <span class="s">{2026}</span><span class="p">,</span>
+<span class="p">}</span>
+</code>
+                                            </pre>
+                                        </figure>                                      
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Paper -->
+                            <div class="row publication-content">
+                                <div class="col-md-2">
+                                    <span class="ins-ico">IJCV</span>
+                                </div>
+                                <div class="col-md-10">
+                                    <a class="publication-title" href="">Source-Free Domain Adaptation with Vision-Language Prior</a>
+                                    <p class="publication-autors del-p"><strong>S. Tang</strong>, <strong>Y. Bai</strong>, <strong>W. Su</strong>, M. Ye, J. Zhang, X. Zhu</p>
+                                    <p class="publication-journal del-p">International Journal of Computer Vision</p>
+                                    <p style="margin-top: 10px;">
+                                        <a class="link-ico bib-link">BIB</a>
+                                        <a class="link-ico" href="">PDF</a>
+                                        <a class="link-ico">Project</a>
+                                    </p>
+                                    <div class="code row " style="display: none;" hidden_status="true">
+                                        <figure class="highlight">
+                                            <pre>
+                                                <code>
+<span class="nc">@article</span><span class="p">{</span><span class="nl">tang2026difo++</span><span class="p">,</span>
+<span class="na">  title</span> <span class="p">=</span> <span class="s">{Source-Free Domain Adaptation with Vision-Language Prior}</span><span class="p">,</span>
+<span class="na">  author</span> <span class="p">=</span> <span class="s">{<strong>Song Tang</strong>, <strong>Yunxiang Bai</strong>, <strong>Wenxin Su</strong>, Mao Ye, Jianwei Zhang, Xiatian Zhu}</span><span class="p">,</span>
+<span class="na">  journal</span> <span class="p">=</span> <span class="s">{International Journal of Computer Vision}</span><span class="p">,</span>
+<span class="na">  pages</span> <span class="p">=</span> <span class="s">{1--22}</span><span class="p">,</span>
+<span class="na">  year</span> <span class="p">=</span> <span class="s">{2026}</span><span class="p">,</span>
+<span class="p">}</span>
+</code>
+                                            </pre>
+                                        </figure>                                      
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Paper -->
+                            <div class="row publication-content">
+                                <div class="col-md-2">
+                                    <span class="ins-ico">PR</span>
+                                </div>
+                                <div class="col-md-10">
+                                    <a class="publication-title" href="">Source-Free Domain Adaptive Object Detection with Semantics Compensation</a>
+                                    <p class="publication-autors del-p"><strong>S. Tang</strong>, <strong>J. Yang</strong>, M. Ye, B. Wang, Y. Gan, X. Zhu</p>
+                                    <p class="publication-journal del-p">Pattern Recognition</p>
+                                    <p style="margin-top: 10px;">
+                                        <a class="link-ico bib-link">BIB</a>
+                                        <a class="link-ico" href="">PDF</a>
+                                        <a class="link-ico">Project</a>
+                                    </p>
+                                    <div class="code row " style="display: none;" hidden_status="true">
+                                        <figure class="highlight">
+                                            <pre>
+                                                <code>
+<span class="nc">@article</span><span class="p">{</span><span class="nl">tang2026wsco</span><span class="p">,</span>
+<span class="na">  title</span> <span class="p">=</span> <span class="s">{Source-Free Domain Adaptive Object Detection with Semantics Compensation}</span><span class="p">,</span>
+<span class="na">  author</span> <span class="p">=</span> <span class="s">{<strong>Song Tang</strong>, <strong>Jiuzheng Yang</strong>, Mao Ye, Boyu Wang, Yan Gan, Xiatian Zhu}</span><span class="p">,</span>
+<span class="na">  journal</span> <span class="p">=</span> <span class="s">{Pattern Recognition}</span><span class="p">,</span>
+<span class="na">  pages</span> <span class="p">=</span> <span class="s">{1--26}</span><span class="p">,</span>
+<span class="na">  year</span> <span class="p">=</span> <span class="s">{2026}</span><span class="p">,</span>
+<span class="p">}</span>
+</code>
+                                            </pre>
+                                        </figure>                                      
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Paper -->
+                            <div class="row publication-content">
+                                <div class="col-md-2">
+                                    <span class="ins-ico">ICLR</span>
+                                </div>
+                                <div class="col-md-10">
+                                    <a class="publication-title" href="">Consistent Text-to-Image Generation via Scene De-Contextualization</a>
+                                    <p class="publication-autors del-p"><strong>S. Tang</strong>, <strong>P. Gong</strong>, <strong>K. Li</strong>, <strong>K. Guo</strong>, B. Wang, M. Ye, J. Zhang, X. Zhu</p>
+                                    <p class="publication-journal del-p">International Conference on Learning Representations (ICLR)</p>
+                                    <p style="margin-top: 10px;">
+                                        <a class="link-ico bib-link">BIB</a>
+                                        <a class="link-ico" href="">PDF</a>
+                                        <a class="link-ico">Project</a>
+                                    </p>
+                                    <div class="code row " style="display: none;" hidden_status="true">
+                                        <figure class="highlight">
+                                            <pre>
+                                                <code>
+<span class="nc">@article</span><span class="p">{</span><span class="nl">tang2026desdc</span><span class="p">,</span>
+<span class="na">  title</span> <span class="p">=</span> <span class="s">{Consistent Text-to-Image Generation via Scene De-Contextualization}</span><span class="p">,</span>
+<span class="na">  author</span> <span class="p">=</span> <span class="s">{<strong>Song Tang</strong>, <strong>Peihao Gong</strong>, <strong>Kunyu Li</strong>, <strong>Kai Guo</strong>, Boyu Wang, Mao Ye, Jianwei Dr. Zhang, Xiatian Zhu}</span><span class="p">,</span>
+<span class="na">  journal</span> <span class="p">=</span> <span class="s">{International Conference on Learning Representations (ICLR) 2026}</span><span class="p">,</span>
+<span class="na">  pages</span> <span class="p">=</span> <span class="s">{1--29}</span><span class="p">,</span>
+<span class="na">  year</span> <span class="p">=</span> <span class="s">{2026}</span><span class="p">,</span>
+<span class="p">}</span>
+</code>
+                                            </pre>
+                                        </figure>                                      
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Paper -->
+                            <div class="row publication-content">
+                                <div class="col-md-2">
+                                    <span class="ins-ico">ICLR</span>
+                                </div>
+                                <div class="col-md-10">
+                                    <a class="publication-title" href="">SAGA: Structural Aggregation Guided Alignment with Dynamic View and Neighborhood Order Selection for Multiview Graph Domain Adaptation</a>
+                                    <p class="publication-autors del-p">R. Fang, J. Zhao, S. Wang, R. Pu, B. Li, J. Cai, Z. Li, Z. Jing, J. Zhu, <strong>S. Tang</strong>, C. Ling, B. Wang</p>
+                                    <p class="publication-journal del-p">International Conference on Learning Representations (ICLR)</p>
+                                    <p style="margin-top: 10px;">
+                                        <a class="link-ico bib-link">BIB</a>
+                                        <a class="link-ico" href="">PDF</a>
+                                        <a class="link-ico">Project</a>
+                                    </p>
+                                    <div class="code row " style="display: none;" hidden_status="true">
+                                        <figure class="highlight">
+                                            <pre>
+                                                <code>
+<span class="nc">@article</span><span class="p">{</span><span class="nl">fang2026saga</span><span class="p">,</span>
+<span class="na">  title</span> <span class="p">=</span> <span class="s">{SAGA: Structural Aggregation Guided Alignment with Dynamic View and Neighborhood Order Selection for Multiview Graph Domain Adaptation}</span><span class="p">,</span>
+<span class="na">  author</span> <span class="p">=</span> <span class="s">{Ruiyi Fang, Jingyu Zhao, Shuo Wang, Ruizhi Pu, Bingheng Li, Jiale Cai, Zhihao Li, Zihao Jing, Jian Zhu, <strong>Song Tang</strong>, Charles Ling, Boyu Wang}</span><span class="p">,</span>
+<span class="na">  journal</span> <span class="p">=</span> <span class="s">{International Conference on Learning Representations (ICLR) 2026}</span><span class="p">,</span>
+<span class="na">  pages</span> <span class="p">=</span> <span class="s">{1--20}</span><span class="p">,</span>
+<span class="na">  year</span> <span class="p">=</span> <span class="s">{2026}</span><span class="p">,</span>
+<span class="p">}</span>
+</code>
+                                            </pre>
+                                        </figure>                                      
+                                    </div>
+                                </div>
+                            </div>
+                            
+
+                            <!-- Paper -->
+                            <div class="row publication-content">
+                                <div class="col-md-2">
+                                    <span class="ins-ico">PR</span>
+                                </div>
+                                <div class="col-md-10">
+                                    <a class="publication-title" href="">Source-Free Domain Adaptation via Multimodal Space-Guided Alignment</a>
+                                    <p class="publication-autors del-p"><strong>L. Chen</strong>, <strong>Y. Bai</strong>, Y. Hu, Q. Wang, X. Qi</p>
+                                    <p class="publication-journal del-p">Pattern Recognition (PR)</p>
+                                    <p style="margin-top: 10px;">
+                                        <a class="link-ico bib-link">BIB</a>
+                                        <a class="link-ico" href="">PDF</a>
+                                        <a class="link-ico">Project</a>
+                                    </p>
+                                    <div class="code row " style="display: none;" hidden_status="true">
+                                        <figure class="highlight">
+                                            <pre>
+                                                <code>
+<span class="nc">@article</span><span class="p">{</span><span class="nl">chen2026msga</span><span class="p">,</span>
+<span class="na">  title</span> <span class="p">=</span> <span class="s">{Source-Free Domain Adaptation via Multimodal Space-Guided Alignment}</span><span class="p">,</span>
+<span class="na">  author</span> <span class="p">=</span> <span class="s">{<strong>Lijuan Chen</strong>, <strong>Yunxiang Bai</strong>, Ying Hu, Qiong Wang, Xiaozhi Qi}</span><span class="p">,</span>
+<span class="na">  journal</span> <span class="p">=</span> <span class="s">{Pattern Recognition}</span><span class="p">,</span>
+<span class="na">  pages</span> <span class="p">=</span> <span class="s">{1--14}</span><span class="p">,</span>
+<span class="na">  year</span> <span class="p">=</span> <span class="s">{2026}</span><span class="p">,</span>
+<span class="na">  publisher</span> <span class="p">=</span> <span class="s">{Elsvier}</span><span class="p">,</span>
+<span class="p">}</span>
+</code>
+                                            </pre>
+                                        </figure>                                      
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Paper -->
+                            <div class="row publication-content">
+                                <div class="col-md-2">
+                                    <span class="ins-ico">IEEE-TMM</span>
+                                </div>
+                                <div class="col-md-10">
+                                    <a class="publication-title" href="">Long-Short Match for Lost Control in UAV Multi-Object Tracking</a>
+                                    <p class="publication-autors del-p">Z. Zou, M. Ye, L. Ji, L. Zhou, <strong>S. Tang</strong>, Y. Gan, S. Li</p>
+                                    <p class="publication-journal del-p">IEEE Transactions on Multimedia (TMM)</p>
+                                    <p style="margin-top: 10px;">
+                                        <a class="link-ico bib-link">BIB</a>
+                                        <a class="link-ico" href="">PDF</a>
+                                    </p>
+                                    <div class="code row " style="display: none;" hidden_status="true">
+                                        <figure class="highlight">
+                                            <pre>
+                                                <code>
+<span class="nc">@article</span><span class="p">{</span><span class="nl">chen2026msga</span><span class="p">,</span>
+<span class="na">  title</span> <span class="p">=</span> <span class="s">{Long-Short Match for Lost Control in UAV Multi-Object Tracking}</span><span class="p">,</span>
+<span class="na">  author</span> <span class="p">=</span> <span class="s">{Zizhuang Zou; Mao Ye; Luping Ji; Lihua Zhou, <strong>Song Tang</strong>, Yan Gan, Shuai Li}</span><span class="p">,</span>
+<span class="na">  journal</span> <span class="p">=</span> <span class="s">{IEEE Transactions on Multimedia}</span><span class="p">,</span>
+<span class="na">  pages</span> <span class="p">=</span> <span class="s">{1--15}</span><span class="p">,</span>
+<span class="na">  year</span> <span class="p">=</span> <span class="s">{2025}{10.1109/TMM.2025.3632642}</span><span class="p">,</span>
+<span class="na">  publisher</span> <span class="p">=</span> <span class="s">{IEEE}</span><span class="p">,</span>
+<span class="p">}</span>
+</code>
+                                            </pre>
+                                        </figure>                                      
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <!-- Paper -->
+                            <div class="row publication-content">
+                                <div class="col-md-2">
+                                    <span class="ins-ico">AAAI (Oral)</span>
+                                </div>
+                                <div class="col-md-10">
+                                    <a class="publication-title" href="">Graph Domain Adaptation via Homophily-Agnostic Reconstructing Structure</a>
+                                    <p class="publication-autors del-p">R. Fang, S. Wang, R. Pu, Q. Zeng, H. Zheng, Z. Wang, J. Cai, Z. Mei, <strong>S. Tang</strong>, C. Ling, B. Wang</p>
+                                    <p class="publication-journal del-p">Annual AAAI Conference on Artificial Intelligence (AAAI) 2026
+                                    </p>
+                                    <p style="margin-top: 10px;">
+                                        <a class="link-ico bib-link">BIB</a>
+                                        <a class="link-ico" href="">PDF</a>
+                                        <a class="link-ico">Project</a>
+                                    </p>
+                                    <div class="code row " style="display: none;" hidden_status="true">
+                                        <figure class="highlight">
+                                            <pre>
+                                                <code>
+<span class="nc">@article</span><span class="p">{</span><span class="nl">fang2026gdahars</span><span class="p">,</span>
+<span class="na">  title</span> <span class="p">=</span> <span class="s">{Graph Domain Adaptation via Homophily-Agnostic Reconstructing Structure}</span><span class="p">,</span>
+<span class="na">  author</span> <span class="p">=</span> <span class="s">{Ruiyi Fang, Shuo Wang, Ruizhi Pu, QIUHAO Zeng, Hao Zheng, Ziyan Wang, Jiale Cai, Zhimin Mei, <strong>Song Tang</strong>, Charles Ling, Boyu Wang}</span><span class="p">,</span>
+<span class="na">  journal</span> <span class="p">=</span> <span class="s">{Annual AAAI Conference on Artificial Intelligence (AAAI) 2026}</span><span class="p">,</span>
+<span class="na">  pages</span> <span class="p">=</span> <span class="s">{1--14}</span><span class="p">,</span>
+<span class="na">  year</span> <span class="p">=</span> <span class="s">{2026}</span><span class="p">,</span>
+<span class="na">  publisher</span> <span class="p">=</span> <span class="s">{AAAI}</span><span class="p">,</span>
+<span class="p">}</span>
+</code>
+                                            </pre>
+                                        </figure>                                      
+                                    </div>
+                                </div>
+                            </div>
+
+                            
+                            <!-- Paper -->
+                            <div class="row publication-content">
+                                <div class="col-md-2">
+                                    <span class="ins-ico">NeurIPS</span>
+                                </div>
+                                <div class="col-md-10">
+                                    <a class="publication-title" href="">Multimodal Causal Reasoning for UAV Object Detection</a>
+                                    <p class="publication-autors del-p">N. Li, M. Ye, L. Zhou, S. Li, <strong>S. Tang</strong>, L. Ji, C. Zhu</p>
+                                    <p class="publication-journal del-p">Annual Conference on Neural Information Processing Systems (NeurIPS) 2025 
+                                    </p>
+                                    <p style="margin-top: 10px;">
+                                        <a class="link-ico bib-link">BIB</a>
+                                        <a class="link-ico" href="">PDF</a>
+                                        <a class="link-ico">Project</a>
+                                    </p>
+                                    <div class="code row " style="display: none;" hidden_status="true">
+                                        <figure class="highlight">
+                                            <pre>
+                                                <code>
+<span class="nc">@article</span><span class="p">{</span><span class="nl">li2025multimodalcausal</span><span class="p">,</span>
+<span class="na">  title</span> <span class="p">=</span> <span class="s">{Multimodal Causal Reasoning for UAV Object Detection}</span><span class="p">,</span>
+<span class="na">  author</span> <span class="p">=</span> <span class="s">{Nianxin Li, Mao Ye, Lihua Zhou, Shuaifeng Li, <strong>Song Tang</strong>, Luping Ji, Ce Zhu}</span><span class="p">,</span>
+<span class="na">  journal</span> <span class="p">=</span> <span class="s">{Annual Conference on Neural Information Processing Systems (NeurIPS) 2025}</span><span class="p">,</span>
+<span class="na">  pages</span> <span class="p">=</span> <span class="s">{1--14}</span><span class="p">,</span>
+<span class="na">  year</span> <span class="p">=</span> <span class="s">{2025}</span><span class="p">,</span>
+<span class="na">  publisher</span> <span class="p">=</span> <span class="s">{NeurIPS}</span><span class="p">,</span>
+<span class="p">}</span>
+</code>
+                                            </pre>
+                                        </figure>                                      
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Paper -->
+                            <div class="row publication-content">
+                                <div class="col-md-2">
+                                    <span class="ins-ico">CAAI-TIT</span>
+                                </div>
+                                <div class="col-md-10">
+                                    <a class="publication-title" href="">Model adaptation via credible local context representation</a>
+                                    <p class="publication-autors del-p"><strong>S. Tang</strong>, <strong>W. Su</strong>, Y. Yang, <strong>L. Chen</strong> and M. Ye</p>
+                                    <p class="publication-journal del-p">CAAI Transactions on Intelligence Technology (CTIT) (IF = 7.3)
+                                    </p>
+                                    <p style="margin-top: 10px;">
+                                        <a class="link-ico bib-link">BIB</a>
+                                        <a href="https://ietresearch.onlinelibrary.wiley.com/doi/full/10.1049/cit2.12228" class="link-ico">PDF</a>
+                                        <a href="https://github.com/tntek/CLCR" class="link-ico">Code</a>
+                                        <a  class="link-ico">Project</a>
+                                    </p>
+                                    <div class="code row " style="display: none;" hidden_status="true">
+                                        <figure class="highlight">
+                                            <pre>
+                                                <code>
+<span class="nc">@article</span><span class="p">{</span><span class="nl">tang2023model</span><span class="p">,</span>
+<span class="na">  title</span> <span class="p">=</span> <span class="s">{Model adaptation via credible local context representation}</span><span class="p">,</span>
+<span class="na">  author</span> <span class="p">=</span> <span class="s">{Tang, Song and Su, Wenxin and Yang, Yan and Chen, Lijuan and Ye, Mao}</span><span class="p">,</span>
+<span class="na">  journal</span> <span class="p">=</span> <span class="s">{CAAI Transactions on Intelligence Technology}</span><span class="p">,</span>
+<span class="na">  pages</span> <span class="p">=</span> <span class="s">{638--651}</span><span class="p">,</span>
+<span class="na">  volmue</span> <span class="p">=</span> <span class="s">{10}</span><span class="p">,</span>
+<span class="na">  issue</span> <span class="p">=</span> <span class="s">{3}</span><span class="p">,</span>
+<span class="na">  year</span> <span class="p">=</span> <span class="s">{2025}</span><span class="p">,</span>
+<span class="na">  publisher</span> <span class="p">=</span> <span class="s">{Wiley Online Library}</span><span class="p">,</span>
+<span class="p">}</span>
+</code>
+                                            </pre>
+                                        </figure>                                        
+                                    </div>
+                               </div>
+                            </div>
+                            
+                            <!-- Paper -->
+                            <div class="row publication-content">
+                                <div class="col-md-2">
+                                    <span class="ins-ico">CVPR</span>
+                                </div>
+                                <div class="col-md-10">
+                                    <a class="publication-title" href="">Domain Adaptive Diabetic Retinopathy Grading with Model Absence and Flowing Data</a>
+                                    <p class="publication-autors del-p"><strong>W. Su</strong>, <strong>S. Tang*</strong>, X. Liu, X. Yi, M. Ye, C. Zu, J. Li, X. Zhu</p>
+                                    <p class="publication-journal del-p">IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR) 2025 
+                                    </p>
+                                    <p style="margin-top: 10px;">
+                                        <a class="link-ico bib-link">BIB</a>
+                                        <a class="link-ico" href="">PDF</a>
+                                        <a class="link-ico">Project</a>
+                                    </p>
+                                    <div class="code row " style="display: none;" hidden_status="true">
+                                        <figure class="highlight">
+                                            <pre>
+                                                <code>
+<span class="nc">@article</span><span class="p">{</span><span class="nl">tang2025omgda</span><span class="p">,</span>
+<span class="na">  title</span> <span class="p">=</span> <span class="s">{Domain Adaptive Diabetic Retinopathy Grading with Model Absence and Flowing Data}</span><span class="p">,</span>
+<span class="na">  author</span> <span class="p">=</span> <span class="s">{<strong>Wenxin Su</strong>, <strong>Song Tang*</strong>, Xiaofeng Liu, Xiaojing Yi, Mao Ye, Chunxiao Zu, Jiahao Li, Xiatian Zhu}</span><span class="p">,</span>
+<span class="na">  journal</span> <span class="p">=</span> <span class="s">{IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR) 2025}</span><span class="p">,</span>
+<span class="na">  pages</span> <span class="p">=</span> <span class="s">{1--14}</span><span class="p">,</span>
+<span class="na">  year</span> <span class="p">=</span> <span class="s">{2025}</span><span class="p">,</span>
+<span class="na">  publisher</span> <span class="p">=</span> <span class="s">{CVPR}</span><span class="p">,</span>
+<span class="p">}</span>
+</code>
+                                            </pre>
+                                        </figure>                                      
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Paper -->
+                            <div class="row publication-content">
+                                <div class="col-md-2">
+                                    <span class="ins-ico">CVPR</span>
+                                </div>
+                                <div class="col-md-10">
+                                    <a class="publication-title" href="">Pseudo Visible Feature Fine-Grained Fusion for Thermal Object Detection</a>
+                                    <p class="publication-autors del-p">T. Li, M. Ye, T. Wu, N. Li, S. Li, <strong>S. Tang</strong>, L. Ji</p>
+                                    <p class="publication-journal del-p">IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR) 2025 
+                                    </p>
+                                    <p style="margin-top: 10px;">
+                                        <a class="link-ico bib-link">BIB</a>
+                                        <a class="link-ico" href="">PDF</a>
+                                        <a class="link-ico">Project</a>
+                                    </p>
+                                    <div class="code row " style="display: none;" hidden_status="true">
+                                        <figure class="highlight">
+                                            <pre>
+                                                <code>
+<span class="nc">@article</span><span class="p">{</span><span class="nl">li2025therped</span><span class="p">,</span>
+<span class="na">  title</span> <span class="p">=</span> <span class="s">{Pseudo Visible Feature Fine-Grained Fusion for Thermal Object Detection}</span><span class="p">,</span>
+<span class="na">  author</span> <span class="p">=</span> <span class="s">{Ting Li, Mao Ye, Tianwen Wu, Nianxin Li, Shuaifeng Li, <strong>Song Tang*</strong>, Luping Ji}</span><span class="p">,</span>
+<span class="na">  journal</span> <span class="p">=</span> <span class="s">{IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR) 2025}</span><span class="p">,</span>
+<span class="na">  pages</span> <span class="p">=</span> <span class="s">{1--14}</span><span class="p">,</span>
+<span class="na">  year</span> <span class="p">=</span> <span class="s">{2025}</span><span class="p">,</span>
+<span class="na">  publisher</span> <span class="p">=</span> <span class="s">{CVPR}</span><span class="p">,</span>
+<span class="p">}</span>
+</code>
+                                            </pre>
+                                        </figure>                                      
+                                    </div>
+                                </div>
+                            </div>
+                            
+
+                            <!-- Paper -->
+                            <div class="row publication-content">
+                                <div class="col-md-2">
+                                    <span class="ins-ico">ICLR (Oral)</span>
+                                </div>
+                                <div class="col-md-10">
+                                    <a class="publication-title" href="">Proxy Denoising for Source-Free Domain Adaptation</a>
+                                    <p class="publication-autors del-p"><strong>Song Tang</strong>, <strong>Wenxin Su</strong>, Y. Gan, M. Ye, J. Zhang, X. Zhu</p>
+                                    <p class="publication-journal del-p">International Conference on Learning Representations (ICLR) 2025</p>
+                                    <p style="margin-top: 10px;">
+                                        <a class="link-ico bib-link">BIB</a>
+                                        <a class="link-ico" href="">PDF</a>
+                                        <a class="link-ico">Project</a>
+                                    </p>
+                                    <div class="code row " style="display: none;" hidden_status="true">
+                                        <figure class="highlight">
+                                            <pre>
+                                                <code>
+<span class="nc">@article</span><span class="p">{</span><span class="nl">tang2025proxy</span><span class="p">,</span>
+<span class="na">  title</span> <span class="p">=</span> <span class="s">{Proxy Denoising for Source-Free Domain Adaptation}</span><span class="p">,</span>
+<span class="na">  author</span> <span class="p">=</span> <span class="s">{<strong>Song Tang</strong>, <strong>Wenxin Su</strong>, Yan Gan, Mao Ye, Jianwei Zhang, Xiatian Zhu}</span><span class="p">,</span>
+<span class="na">  journal</span> <span class="p">=</span> <span class="s">{International Conference on Learning Representations (ICLR) 2025}</span><span class="p">,</span>
+<span class="na">  pages</span> <span class="p">=</span> <span class="s">{1--14}</span><span class="p">,</span>
+<span class="na">  year</span> <span class="p">=</span> <span class="s">{2025}</span><span class="p">,</span>
+<span class="na">  publisher</span> <span class="p">=</span> <span class="s">{ICLR}</span><span class="p">,</span>
+<span class="p">}</span>
+</code>
+                                            </pre>
+                                        </figure>                                      
+                                    </div>
+                                </div>
+                            </div>
+                            
+
+                            <!-- Paper -->
+                            <div class="row publication-content">
+                                <div class="col-md-2">
+                                    <span class="ins-ico">AAAI</span>
+                                </div>
+                                <div class="col-md-10">
+                                    <a class="publication-title" href="">Self-Prompting Analogical Reasoning for UAV Object Detection</a>
+                                    <p class="publication-autors del-p">N. Li, M. Ye, L. Zhou, <strong>Song Tang</strong>, Y. Gan, Z. Liang, X. Zhu</p>
+                                    <p class="publication-journal del-p">Annual AAAI Conference on Artificial Intelligence (AAAI) 2025 
+                                    </p>
+                                    <p style="margin-top: 10px;">
+                                        <a class="link-ico bib-link">BIB</a>
+                                        <a class="link-ico" href="">PDF</a>
+                                        <a class="link-ico">Project</a>
+                                    </p>
+                                    <div class="code row " style="display: none;" hidden_status="true">
+                                        <figure class="highlight">
+                                            <pre>
+                                                <code>
+<span class="nc">@article</span><span class="p">{</span><span class="nl">li2024selfprompt</span><span class="p">,</span>
+<span class="na">  title</span> <span class="p">=</span> <span class="s">{Self-Prompting Analogical Reasoning for UAV Object Detection}</span><span class="p">,</span>
+<span class="na">  author</span> <span class="p">=</span> <span class="s">{Nianxin Li, Mao Ye, Lihua Zhou, <strong>Song Tang</strong>, Yan Gan, Zizhuo Liang, Xiatian Zhu}</span><span class="p">,</span>
+<span class="na">  journal</span> <span class="p">=</span> <span class="s">{Annual AAAI Conference on Artificial Intelligence (AAAI) 2025}</span><span class="p">,</span>
+<span class="na">  pages</span> <span class="p">=</span> <span class="s">{1--14}</span><span class="p">,</span>
+<span class="na">  year</span> <span class="p">=</span> <span class="s">{2025}</span><span class="p">,</span>
+<span class="na">  publisher</span> <span class="p">=</span> <span class="s">{AAAI}</span><span class="p">,</span>
+<span class="p">}</span>
+</code>
+                                            </pre>
+                                        </figure>                                      
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            
+                            <!-- Paper -->
+                            <div class="row publication-content">
+                                <div class="col-md-2">
+                                    <span class="ins-ico">MedIA</span>
+                                </div>
+                                <div class="col-md-10">
+                                    <a class="publication-title" href="https://doi.org/10.1016/j.media.2024.103412">Few-Shot Medical Image Segmentation with High-Fidelity Prototypes</a>
+                                    <p class="publication-autors del-p"><strong>S. Tang</strong>, <strong>S. Yan</strong>, X. Qi, <strong>J. Gao</strong>, M. Ye, J. Zhang, X. Zhu</p>
+                                    <p class="publication-journal del-p">Medical Image Analysis 
+                                    </p>
+                                    <p style="margin-top: 10px;">
+                                        <a class="link-ico bib-link">BIB</a>
+                                        <a class="link-ico" href="https://doi.org/10.1016/j.media.2024.103412">PDF</a>
+                                        <a class="link-ico">Project</a>
+                                    </p>
+                                    <div class="code row " style="display: none;" hidden_status="true">
+                                        <figure class="highlight">
+                                            <pre>
+                                                <code>
+<span class="nc">@article</span><span class="p">{</span><span class="nl">tang2024fss</span><span class="p">,</span>
+<span class="na">  title</span> <span class="p">=</span> <span class="s">{Few-Shot Medical Image Segmentation with High-Fidelity Prototypes}</span><span class="p">,</span>
+<span class="na">  author</span> <span class="p">=</span> <span class="s">{Tang Song, and Yan Shaxu, and Qi Xiaozhi, and Gao Jianxin, and Ye Mao, and Zhang Jianwei, and Zhu Xiatian}</span><span class="p">,</span>
+<span class="na">  journal</span> <span class="p">=</span> <span class="s">{Medical Image Analysis}</span><span class="p">,</span>
+<span class="na">  pages</span> <span class="p">=</span> <span class="s">{1--14}</span><span class="p">,</span>
+<span class="na">  year</span> <span class="p">=</span> <span class="s">{2024}</span><span class="p">,</span>
+<span class="na">  publisher</span> <span class="p">=</span> <span class="s">{Elsevier}</span><span class="p">,</span>
+<span class="p">}</span>
+</code>
+                                            </pre>
+                                        </figure>                                      
+                                    </div>
+                                </div>
+                            </div>
+
+
+
+
+
+                            <!-- Paper -->
+                            <div class="row publication-content">
+                                <div class="col-md-2">
+                                    <span class="ins-ico">IEEE-TCSVT</span>
+                                </div>
+                                <div class="col-md-10">
+                                    <a class="publication-title" href="https://ieeexplore.ieee.org/document/10758825">LESEP: Boosting Adversarial Transferability via Latent Encoding and Semantic Embedding Perturbations</a>
+                                    <p class="publication-autors del-p">Y. Gan, C. Wu, D. Ouyang, <strong>S. Tang</strong>, M. Ye and T. Xiang</p>
+                                    <p class="publication-journal del-p">IEEE Transactions on Circuits and Systems for Video Technology 
+                                    </p>
+                                    <p style="margin-top: 10px;">
+                                        <a class="link-ico bib-link">BIB</a>
+                                        <a class="link-ico" href="https://ieeexplore.ieee.org/document/10758825">PDF</a>
+                                        <a class="link-ico">Project</a>
+                                    </p>
+                                    <div class="code row " style="display: none;" hidden_status="true">
+                                        <figure class="highlight">
+                                            <pre>
+                                                <code>
+<span class="nc">@article</span><span class="p">{</span><span class="nl">gan2024lesep</span><span class="p">,</span>
+<span class="na">  title</span> <span class="p">=</span> <span class="s">{LESEP: Boosting Adversarial Transferability via Latent Encoding and Semantic Embedding Perturbations}</span><span class="p">,</span>
+<span class="na">  author</span> <span class="p">=</span> <span class="s">{Gan Yan, and Wu Chengqian, and Ouyang Deqiang, and Tang Song, and Ye Mao, and Xiang Tao}</span><span class="p">,</span>
+<span class="na">  journal</span> <span class="p">=</span> <span class="s">{IEEE Transactions on Circuits and Systems for Video Technology}</span><span class="p">,</span>
+<span class="na">  pages</span> <span class="p">=</span> <span class="s">{1--14}</span><span class="p">,</span>
+<span class="na">  year</span> <span class="p">=</span> <span class="s">{2024}</span><span class="p">,</span>
+<span class="na">  publisher</span> <span class="p">=</span> <span class="s">{IEEE}</span><span class="p">,</span>
+<span class="p">}</span>
+</code>
+                                            </pre>
+                                        </figure>                                      
+                                    </div>
+                                </div>
+                            </div>
+
+                            
+                            <!-- Paper -->
+                            <div class="row publication-content">
+                                <div class="col-md-2">
+                                    <span class="ins-ico">IEEE-TCSI</span>
+                                </div>
+                                <div class="col-md-10">
+                                    <a class="publication-title" href="https://ieeexplore.ieee.org/abstract/document/10736009">Intelligent Event-Triggered H∞ Load Frequency Control for Power Systems With Multiple-Resource Delays</a>
+                                    <p class="publication-autors del-p"><strong>J. Luo</strong>, <strong>L. Chen*</strong>, K. Shi, <strong>S. Tang</strong>, R, Zhang, J. Cheng and J.H. Park</p>
+                                    <p class="publication-journal del-p"> IEEE Transactions on Circuits and Systems I: Regular Papers 
+                                    </p>
+                                    <p style="margin-top: 10px;">
+                                        <a class="link-ico bib-link">BIB</a>
+                                        <a class="link-ico" href="https://ieeexplore.ieee.org/abstract/document/10736009">PDF</a>
+                                        <a class="link-ico">Project</a>
+                                    </p>
+                                    <div class="code row " style="display: none;" hidden_status="true">
+                                        <figure class="highlight">
+                                            <pre>
+                                                <code>
+<span class="nc">@article</span><span class="p">{</span><span class="nl">luo2024intelligent</span><span class="p">,</span>
+<span class="na">  title</span> <span class="p">=</span> <span class="s">{Intelligent Event-Triggered H∞ Load Frequency Control for Power Systems With Multiple-Resource Delays}</span><span class="p">,</span>
+<span class="na">  author</span> <span class="p">=</span> <span class="s">{Luo, Jinnan and Chen, Lijuan and Shi, Kaibo and Tang, Song and Zhang, Ruimei and Cheng, Jun and Park, Ju H}</span><span class="p">,</span>
+<span class="na">  journal</span> <span class="p">=</span> <span class="s">{IEEE Transactions on Circuits and Systems I: Regular Papers}</span><span class="p">,</span>
+<span class="na">  pages</span> <span class="p">=</span> <span class="s">{1--12}</span><span class="p">,</span>
+<span class="na">  year</span> <span class="p">=</span> <span class="s">{2024}</span><span class="p">,</span>
+<span class="na">  publisher</span> <span class="p">=</span> <span class="s">{IEEE}</span><span class="p">,</span>
+<span class="p">}</span>
+</code>
+                                            </pre>
+                                        </figure>                                      
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Paper -->
+                            <div class="row publication-content">
+                                <div class="col-md-2">
+                                    <span class="ins-ico">ELES</span>
+                                </div>
+                                <div class="col-md-10">
+                                    <a class="publication-title" href="https://www.mdpi.com/2079-9292/13/21/4284">Ro2En: Robust Neural Environment Encoder for Domain Generalization of Fast Motion Planning</a>
+                                    <p class="publication-autors del-p"><strong>L. Chen</strong>, <strong>M. Yu</strong>, <strong>G. Kou</strong> and <strong>J. Luo*</strong></p>
+                                    <p class="publication-journal del-p"> Electronics  
+                                    </p>
+                                    <p style="margin-top: 10px;">
+                                        <a class="link-ico bib-link">BIB</a>
+                                        <a class="link-ico" href="https://www.mdpi.com/2079-9292/13/21/4284">PDF</a>
+                                        <a class="link-ico">Project</a>
+                                    </p>
+                                    <div class="code row " style="display: none;" hidden_status="true">
+                                        <figure class="highlight">
+                                            <pre>
+                                                <code>
+<span class="nc">@article</span><span class="p">{</span><span class="nl">chen2024ro2en</span><span class="p">,</span>
+<span class="na">  title</span> <span class="p">=</span> <span class="s">{Ro2En: Robust Neural Environment Encoder for Domain Generalization of Fast Motion Planning}</span><span class="p">,</span>
+<span class="na">  author</span> <span class="p">=</span> <span class="s">{Chen, Lijuan and Yu, Mingchu and Kou, Guozhao and Luo, Jinnan}</span><span class="p">,</span>
+<span class="na">  journal</span> <span class="p">=</span> <span class="s">{Electronics}</span><span class="p">,</span>
+<span class="na">  volume</span> <span class="p">=</span> <span class="s">{13}</span><span class="p">,</span>
+<span class="na">  number</span> <span class="p">=</span> <span class="s">{21}</span><span class="p">,</span>
+<span class="na">  pages</span> <span class="p">=</span> <span class="s">{4284}</span><span class="p">,</span>
+<span class="na">  year</span> <span class="p">=</span> <span class="s">{2024}</span><span class="p">,</span>
+<span class="p">}</span>
+</code>
+                                            </pre>
+                                        </figure>                                      
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            
+                            <!-- Paper -->
+                            <div class="row publication-content">
+                                <div class="col-md-2">
+                                    <span class="ins-ico">NeurIPS</span>
+                                </div>
+                                <div class="col-md-10">
+                                    <a class="publication-title" href="https://openreview.net/forum?id=S8SEjerTTg&referrer=%5BAuthor%20Console%5D(%2Fgroup%3Fid%3DNeurIPS.cc%2F2024%2FConference%2FAuthors%23your-submissions)">Cloud Object Detector Adaptation by Integrating Different Source Knowledge</a>
+                                    <p class="publication-autors del-p">S. Li, M. Ye, H. Li, N. Li, S, Xiao, <strong>S. Tang</strong> and Xiatian Zhu</p>
+                                    <p class="publication-journal del-p"> Conference on Neural Information Processing Systems (NeurIPS) 2024 
+                                    </p>
+                                    <p style="margin-top: 10px;">
+                                        <a class="link-ico bib-link">BIB</a>
+                                        <a href="https://openreview.net/forum?id=S8SEjerTTg&referrer=%5BAuthor%20Console%5D(%2Fgroup%3Fid%3DNeurIPS.cc%2F2024%2FConference%2FAuthors%23your-submissions)" class="link-ico">PDF</a>
+                                        <a class="link-ico">Project</a>
+                                    </p>
+                                    <div class="code row " style="display: none;" hidden_status="true">
+                                        <figure class="highlight">
+                                            <pre>
+                                                <code>
+<span class="nc">@article</span><span class="p">{</span><span class="nl">li2024cloudobject</span><span class="p">,</span>
+<span class="na">  title</span> <span class="p">=</span> <span class="s">{Cloud Object Detector Adaptation by Integrating Different Source Knowledge}</span><span class="p">,</span>
+<span class="na">  author</span> <span class="p">=</span> <span class="s">{Shuaifeng Li, Mao Ye, Lihua Zhou, Nianxin Li, Siying Xiao, Song Tang and Xiatian Zhu}</span><span class="p">,</span>
+<span class="na">  journal</span> <span class="p">=</span> <span class="s">{Conference on Neural Information Processing Systems (NeurIPS) 2024}</span><span class="p">,</span>
+<span class="na">  pages</span> <span class="p">=</span> <span class="s">{1--13}</span><span class="p">,</span>
+<span class="na">  year</span> <span class="p">=</span> <span class="s">{2024}</span><span class="p">,</span>
+<span class="na">  publisher</span> <span class="p">=</span> <span class="s">{Springer}</span><span class="p">,</span>
+<span class="p">}</span>
+</code>
+                                            </pre>
+                                        </figure>                                      
+                                    </div>
+                                </div>
+                            </div>
+                            
+
+                            <!-- Paper -->
+                            <div class="row publication-content">
+                                <div class="col-md-2">
+                                    <span class="ins-ico">IEEE-TITS</span>
+                                </div>
+                                <div class="col-md-10">
+                                    <a class="publication-title" href="">Illumination Distribution-Aware Thermal Pedestrian Detection</a>
+                                    <p class="publication-autors del-p">S. Li, M. Ye, L. Ji, <strong>S. Tang</strong>, Yan Gan and Xiatian Zhu</p>
+                                    <p class="publication-journal del-p"> IEEE Transactions on Intelligent Transportation Systems
+                                    </p>
+                                    <p style="margin-top: 10px;">
+                                        <a class="link-ico bib-link">BIB</a>
+                                        <a href="https://ieeexplore.ieee.org/document/10642997" class="link-ico">PDF</a>
+                                        <a class="link-ico">Project</a>
+                                    </p>
+                                    <div class="code row " style="display: none;" hidden_status="true">
+                                        <figure class="highlight">
+                                            <pre>
+                                                <code>
+<span class="nc">@article</span><span class="p">{</span><span class="nl">li2024illumination</span><span class="p">,</span>
+<span class="na">  title</span> <span class="p">=</span> <span class="s">{Illumination Distribution-Aware Thermal Pedestrian Detection}</span><span class="p">,</span>
+<span class="na">  author</span> <span class="p">=</span> <span class="s">{Songtao Li, Mao Ye, Luping Ji, Song Tang, Yan Gan and Xiatian Zhu}</span><span class="p">,</span>
+<span class="na">  journal</span> <span class="p">=</span> <span class="s">{IEEE Transactions on Intelligent Transportation Systems}</span><span class="p">,</span>
+<span class="na">  pages</span> <span class="p">=</span> <span class="s">{1--13}</span><span class="p">,</span>
+<span class="na">  year</span> <span class="p">=</span> <span class="s">{2024}</span><span class="p">,</span>
+<span class="na">  publisher</span> <span class="p">=</span> <span class="s">{IEEE}</span><span class="p">,</span>
+<span class="p">}</span>
+</code>
+                                            </pre>
+                                        </figure>                                      
+                                    </div>
+                                </div>
+                            </div>
+
+                            
+                            <!-- Paper -->
+                            <div class="row publication-content">
+                                <div class="col-md-2">
+                                    <span class="ins-ico">ACM-MM</span>
+                                </div>
+                                <div class="col-md-10">
+                                    <a class="publication-title" href="">Adversarial Experts Model for Black-box Domain Adaptation</a>
+                                    <p class="publication-autors del-p">S. Xiao, M. Ye, Q. He, S. Li, <strong>S. Tang</strong> and X. Zhu</p>
+                                    <p class="publication-journal del-p"> ACM Multimedia (ACM-MM), 2024.
+                                    </p>
+                                    <p style="margin-top: 10px;">
+                                        <a class="link-ico bib-link">BIB</a>
+                                        <a href="" class="link-ico">PDF</a>
+                                        <a  class="link-ico">Project</a>
+                                    </p>
+                                    <div class="code row " style="display: none;" hidden_status="true">
+                                        <figure class="highlight">
+                                            <pre>
+                                                <code>
+<span class="nc">@article</span><span class="p">{</span><span class="nl">si2024black</span><span class="p">,</span>
+<span class="na">  title</span> <span class="p">=</span> <span class="s">{Adversarial Experts Model for Black-box Domain Adaptation}</span><span class="p">,</span>
+<span class="na">  author</span> <span class="p">=</span> <span class="s">{Xiao, Siying and Ye, Mao and He, Qichen and Tang, Song and Zhu, Xiatian}</span><span class="p">,</span>
+<span class="na">  journal</span> <span class="p">=</span> <span class="s">{ACM Multimedia (ACM-MM)}</span><span class="p">,</span>
+<span class="na">  pages</span> <span class="p">=</span> <span class="s">{1--19}</span><span class="p">,</span>
+<span class="na">  year</span> <span class="p">=</span> <span class="s">{2024}</span><span class="p">,</span>
+<span class="na">  publisher</span> <span class="p">=</span> <span class="s">{ACM}</span><span class="p">,</span>
+<span class="p">}</span>
+</code>
+                                            </pre>
+                                        </figure>                                      
+                                    </div>
+                                </div>
+                            </div>
+                            
+
+                            <!-- Paper -->
+                            <div class="row publication-content">
+                                <div class="col-md-2">
+                                    <span class="ins-ico">CVPR</span>
+                                </div>
+                                <div class="col-md-10">
+                                    <a class="publication-title" href="">Source-Free Domain Adaptation with Frozen Multimodal Foundation Model</a>
+                                    <p class="publication-autors del-p"><strong>S. Tang</strong>, <strong>W. Su</strong>, M. Ye and X. Zhu</p>
+                                    <p class="publication-journal del-p"> IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR), 2024.
+                                    </p>
+                                    <p style="margin-top: 10px;">
+                                        <a class="link-ico bib-link">BIB</a>
+                                        <a href="" class="link-ico">PDF</a>
+                                        <a href="https://www.taulab.cc/proj/sfda/cvpr24/difo/index.html" class="link-ico">Project</a>
+                                    </p>
+                                    <div class="code row " style="display: none;" hidden_status="true">
+                                        <figure class="highlight">
+                                            <pre>
+                                                <code>
+<span class="nc">@article</span><span class="p">{</span><span class="nl">tang2024difo</span><span class="p">,</span>
+<span class="na">  title</span> <span class="p">=</span> <span class="s">{Source-Free Domain Adaptation with Frozen Multimodal Foundation Model}</span><span class="p">,</span>
+<span class="na">  author</span> <span class="p">=</span> <span class="s">{Tang, Song and Su, Wenxin and Ye, Mao and Zhu, Xiatian}</span><span class="p">,</span>
+<span class="na">  journal</span> <span class="p">=</span> <span class="s">{IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR)}</span><span class="p">,</span>
+<span class="na">  pages</span> <span class="p">=</span> <span class="s">{23711--23720}</span><span class="p">,</span>
+<span class="na">  year</span> <span class="p">=</span> <span class="s">{2024}</span><span class="p">,</span>
+<span class="na">  publisher</span> <span class="p">=</span> <span class="s">{IEEE}</span><span class="p">,</span>
+<span class="p">}</span>
+</code>
+                                            </pre>
+                                        </figure>                                      
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <!-- Paper -->
+                            <div class="row publication-content">
+                                <div class="col-md-2">
+                                    <span class="ins-ico">ESWA</span>
+                                </div>
+                                <div class="col-md-10">
+                                    <a class="publication-title" href="https://doi.org/10.1016/j.eswa.2024.123221">Shooting condition insensitive unmanned aerial vehicle object detection</a>
+                                    <p class="publication-autors del-p">J. Liu, J. Cui, M. Ye, X. Zhu and <strong>S. Tang</strong></p>
+                                    <p class="publication-journal del-p">Expert Systems with Applications (ESWA), Jan. 2024. (IF = 8.5)
+                                    </p>
+                                    <p style="margin-top: 10px;">
+                                        <a class="link-ico bib-link">BIB</a>
+                                        <a href="" class="link-ico">PDF</a>
+                                        <a  class="link-ico">Project</a>
+                                    </p>
+                                    <div class="code row " style="display: none;" hidden_status="true">
+                                        <figure class="highlight">
+                                            <pre>
+                                                <code>
+<span class="nc">@article</span><span class="p">{</span><span class="nl">liu2024shooting</span><span class="p">,</span>
+<span class="na">  title</span> <span class="p">=</span> <span class="s">{MCFilter: Shooting condition insensitive unmanned aerial vehicle object detection}</span><span class="p">,</span>
+<span class="na">  author</span> <span class="p">=</span> <span class="s">{Liu, Jie and Cui, Jinzong and Ye, Mao and Zhu, Xiatian and Tang, Song}</span><span class="p">,</span>
+<span class="na">  journal</span> <span class="p">=</span> <span class="s">{Expert Systems with Applications}</span><span class="p">,</span>
+<span class="na">  pages</span> <span class="p">=</span> <span class="s">{1--19}</span><span class="p">,</span>
+<span class="na">  year</span> <span class="p">=</span> <span class="s">{2024}</span><span class="p">,</span>
+<span class="na">  publisher</span> <span class="p">=</span> <span class="s">{Elsevier}</span><span class="p">,</span>
+<span class="p">}</span>
+</code>
+                                            </pre>
+                                        </figure>                                      
+                                    </div>
+                                </div>
+                            </div>
+
+                            
+
+                            <!-- Paper -->
+                            <div class="row publication-content">
+                                <div class="col-md-2">
+                                    <span class="ins-ico">RIA</span>
+                                </div>
+                                <div class="col-md-10">
+                                    <a class="publication-title" href="">MCFilter: Feature Filter based on Motion-correlation for LiDAR SLAM</a>
+                                    <p class="publication-autors del-p"><strong>H. Sun</strong>, <strong>S. Tang*</strong>, X. Qi, Z. Ma and <strong>J. Gao</strong></p>
+                                    <p class="publication-journal del-p">Robotic Intelligence and Automation (RIA), Oct. 2023. (IF = 2.373)
+                                    </p>
+                                    <p style="margin-top: 10px;">
+                                        <a class="link-ico bib-link">BIB</a>
+                                        <a href="" class="link-ico">PDF</a>
+                                        <a  class="link-ico">Project</a>
+                                    </p>
+                                    <div class="code row " style="display: none;" hidden_status="true">
+                                        <figure class="highlight">
+                                            <pre>
+                                                <code>
+<span class="nc">@article</span><span class="p">{</span><span class="nl">sun2023mcfilter</span><span class="p">,</span>
+<span class="na">  title</span> <span class="p">=</span> <span class="s">{MCFilter: Feature Filter-based on Motion-correlation for LiDAR SLAM}</span><span class="p">,</span>
+<span class="na">  author</span> <span class="p">=</span> <span class="s">{Sun, Han and Tang, Song and Qi, Xiaozhi and Ma, Zhiyuan and Gao, Jianxin}</span><span class="p">,</span>
+<span class="na">  journal</span> <span class="p">=</span> <span class="s">{Robotic Intelligence and Automation}</span><span class="p">,</span>
+<span class="na">  pages</span> <span class="p">=</span> <span class="s">{1--19}</span><span class="p">,</span>
+<span class="na">  year</span> <span class="p">=</span> <span class="s">{2023}</span><span class="p">,</span>
+<span class="na">  publisher</span> <span class="p">=</span> <span class="s">{Emerald}</span><span class="p">,</span>
+<span class="p">}</span>
+</code>
+                                            </pre>
+                                        </figure>                                      
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            
+                               <!-- Paper -->
+                            <div class="row publication-content">
+                                <div class="col-md-2">
+                                    <span class="ins-ico">IJCV</span>
+                                </div>
+                                <div class="col-md-10">
+                                    <a class="publication-title" href="https://link.springer.com/article/10.1007/s11263-023-01892-w">Source-Free Domain Adaptation via Target Prediction Distribution Searching</a>
+                                    <p class="publication-autors del-p"><strong>S. Tang</strong>, <strong>A. Chang</strong>, F. Zhang, X. Zhu, M. Ye and C. Zhang</p>
+                                    <p class="publication-journal del-p">International Journal of Computer Vision (IJCV), Oct. 2023, DOI:10.1007/s11263-023-01892-w. (IF = 19.6)
+                                    </p>
+                                    <p style="margin-top: 10px;">
+                                        <a class="link-ico bib-link">BIB</a>
+                                        <a href="https://link.springer.com/article/10.1007/s11263-023-01892-w" class="link-ico">PDF</a>
+                                        <a href="https://github.com/tntek/TPDS" class="link-ico">Code</a>
+                                        <a  class="link-ico">Project</a>
+                                    </p>
+                                    <div class="code row " style="display: none;" hidden_status="true">
+                                        <figure class="highlight">
+                                            <pre>
+                                                <code>
+<span class="nc">@article</span><span class="p">{</span><span class="nl">tang2023source</span><span class="p">,</span>
+<span class="na">  title</span> <span class="p">=</span> <span class="s">{Source-Free Domain Adaptation via Target Prediction Distribution Searching}</span><span class="p">,</span>
+<span class="na">  author</span> <span class="p">=</span> <span class="s">{Tang, Song and Chang, An and Zhang, Fabian and Zhu, Xiatian and Ye, Mao and Zhang, Changshui}</span><span class="p">,</span>
+<span class="na">  journal</span> <span class="p">=</span> <span class="s">{International Journal of Computer Vision}</span><span class="p">,</span>
+<span class="na">  pages</span> <span class="p">=</span> <span class="s">{1--19}</span><span class="p">,</span>
+<span class="na">  year</span> <span class="p">=</span> <span class="s">{2023}</span><span class="p">,</span>
+<span class="na">  publisher</span> <span class="p">=</span> <span class="s">{Springer}</span><span class="p">,</span>
+<span class="p">}</span>
+</code>
+                                            </pre>
+                                        </figure>                         
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Paper -->
+                            <div class="row publication-content">
+                                <div class="col-md-2">
+                                    <span class="ins-ico">IEEE-TMM</span>
+                                </div>
+                                <div class="col-md-10">
+                                    <a class="publication-title" href="https://ieeexplore.ieee.org/abstract/document/10269002">Progressive Source-Aware Transformer for Generalized Source-Free Domain Adaptation</a>
+                                    <p class="publication-autors del-p"><strong>S. Tang</strong>, <strong>Y. Shi</strong>, <strong>Z. Song</strong>, M. Ye, C. Zhang and Jianwei Zhang</p>
+                                    <p class="publication-journal del-p">IEEE Transactions on Multimedia (TMM), Oct. 2023, DOI:10.1109/TMM.2023.3321421. (IF = 7.3)
+                                    </p>
+                                    <p style="margin-top: 10px;">
+                                        <a class="link-ico bib-link">BIB</a>
+                                        <a href="https://ieeexplore.ieee.org/abstract/document/10269002" class="link-ico">PDF</a>
+                                        <a href="https://github.com/tntek/PSAT-GDA" class="link-ico">Code</a>
+                                        <a  class="link-ico">Project</a>
+                                    </p>
+                                    <div class="code row " style="display: none;" hidden_status="true">
+                                        <figure class="highlight">
+                                            <pre>
+                                                <code>
+<span class="nc">@article</span><span class="p">{</span><span class="nl">tang2023progressive</span><span class="p">,</span>
+<span class="na">  title</span> <span class="p">=</span> <span class="s">{Progressive Source-Aware Transformer for Generalized Source-Free Domain Adaptation}</span><span class="p">,</span>
+<span class="na">  author</span> <span class="p">=</span> <span class="s">{Tang, Song and Shi, Yuji and Song, Zihao and Ye, Mao and Zhang, Changshui and Zhang, Jianwei}</span><span class="p">,</span>
+<span class="na">  journal</span> <span class="p">=</span> <span class="s">{IEEE Transactions on Multimedia}</span><span class="p">,</span>
+<span class="na">  pages</span> <span class="p">=</span> <span class="s">{109974}</span><span class="p">,</span>
+<span class="na">  year</span> <span class="p">=</span> <span class="s">{2023}</span><span class="p">,</span>
+<span class="na">  publisher</span> <span class="p">=</span> <span class="s">{IEEE}</span><span class="p">,</span>
+<span class="p">}</span>
+</code>
+                                            </pre>
+                                        </figure>                                        
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Paper -->
+                            <div class="row publication-content">
+                                <div class="col-md-2">
+                                    <span class="ins-ico">PR</span>
+                                </div>
+                                <div class="col-md-10">
+                                    <a class="publication-title" href="https://www.sciencedirect.com/science/article/abs/pii/S0031320323006726">Source-free domain adaptation with Class Prototype Discovery</a>
+                                    <p class="publication-autors del-p">L. Zhou, N. Li, M. Ye, X. Zhu, <strong>S. Tang</strong></p>
+                                    <p class="publication-journal del-p">Pattern Recognition (PR), Sep. 2023, DOI:10.1016/j.patcog.2023.109974. (IF = 8.0)
+                                    </p>
+                                    <p style="margin-top: 10px;">
+                                        <a class="link-ico bib-link">BIB</a>
+                                        <a href="https://www.sciencedirect.com/science/article/abs/pii/S0031320323006726" class="link-ico">PDF</a>
+                                        <a  class="link-ico">Project</a>
+                                    </p>
+                                    <div class="code row " style="display: none;" hidden_status="true">
+                                        <figure class="highlight">
+                                            <pre>
+                                                <code>
+<span class="nc">@article</span><span class="p">{</span><span class="nl">ZHOU2024109974</span><span class="p">,</span>
+<span class="na">  title</span> <span class="p">=</span> <span class="s">{Source-free domain adaptation with Class Prototype Discovery}</span><span class="p">,</span>
+<span class="na">  author</span> <span class="p">=</span> <span class="s">{Lihua Zhou and Nianxin Li and Mao Ye and Xiatian Zhu and Song Tang}</span><span class="p">,</span>
+<span class="na">  journal</span> <span class="p">=</span> <span class="s">{Pattern Recognition}</span><span class="p">,</span>
+<span class="na">  pages</span> <span class="p">=</span> <span class="s">{109974}</span><span class="p">,</span>
+<span class="na">  year</span> <span class="p">=</span> <span class="s">{2023}</span><span class="p">,</span>
+<span class="na">  publisher</span> <span class="p">=</span> <span class="s">{Elsevier}</span><span class="p">,</span>
+<span class="p">}</span>
+</code>
+                                            </pre>
+                                        </figure>                                        
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <!-- Paper -->
+                            <div class="row publication-content">
+                                <div class="col-md-2">
+                                    <span class="ins-ico">ICRA</span>
+                                </div>
+                                <div class="col-md-10">
+                                    <a class="publication-title" href="https://ieeexplore.ieee.org/abstract/document/10161294">Weakly supervised
+                                        referring
+                                        expression grounding via target-guided knowledge distillation</a>
+                                    <p class="publication-autors del-p">J. Mi, <strong>S. Tang</strong>, Z. Ma, D. Liu and J. Zhang</p>
+                                    <p class="publication-journal del-p">IEEE International Conference on Robotics and
+                                        Automation (ICRA) 2023
+                                    </p>
+                                    <p style="margin-top: 10px;">
+                                        <a class="link-ico bib-link">BIB</a>
+                                        <a href="https://ieeexplore.ieee.org/abstract/document/10161294" class="link-ico">PDF</a>
+                                        <a  class="link-ico">Project</a>
+                                        
+                                    </p>
+                                    <div class="code row " style="display: none;" hidden_status="true">
+                                        <figure class="highlight">
+                                            <pre>
+                                                <code>
+<span class="nc">@inproceedings</span><span class="p">{</span><span class="nl">mi2023weakly</span><span class="p">,</span>
+<span class="na">  title</span> <span class="p">=</span> <span class="s">{Weakly Supervised Referring Expression Grounding via Target-Guided Knowledge Distillation}</span><span class="p">,</span>
+<span class="na">  author</span> <span class="p">=</span> <span class="s">{Mi, Jinpeng and Tang, Song and Ma, Zhiyuan and Liu, Dan and Li, Qingdu and Zhang, Jianwei}</span><span class="p">,</span>
+<span class="na">  booktitle</span> <span class="p">=</span> <span class="s">{2023 IEEE International Conference on Robotics and Automation (ICRA)}</span><span class="p">,</span>
+<span class="na">  pages</span> <span class="p">=</span> <span class="s">{8299--8305}</span><span class="p">,</span>
+<span class="na">  year</span> <span class="p">=</span> <span class="s">{2023}</span><span class="p">,</span>
+<span class="na">  organization</span> <span class="p">=</span> <span class="s">{IEEE}</span><span class="p">,</span>
+<span class="p">}</span>
+</code>
+                                            </pre>
+                                        </figure>                                     
+                                    </div>
+                                </div>
+                            </div>
+
+
+
+                    
+                    
+                    
+
+                    
+                </div>
+            </div>
+<div class="footer-container">
+                            <div class="footer-parent"><img
+                                    src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAB4AAAAB+CAMAAADyQ/wTAAAAolBMVEUAAAD///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////8ELnaCAAAANXRSTlMA9CPeCPsE2McMwa7SF6GF6PIzE/jjdlzMuj0uKB9B72w4l4wQtBpoTkbsp2JKepJXnH9xUgP+CQ8AAAxTSURBVHja7N3bTpNBFIDR3QqC+BMxBq1GRJRQSBuO2e//akAIGQ6lBMLscLHWA8ztl5nMzI7DAADK5edxAADFMrcuPgUAUCqvrO8FAFApr41mOwEA1MkbH6YBAJTJWxvOoQGgTDYnBwEAlMg7tqfuQwNAibxn/SgAgP7yvtHMvxwA0F8+tHu+HwBAX/nYcLoSAEBPucjGnwAAOsqFVs9+BwDQTT7h6xevggGgm3zS2l+vggGgk1xiOP0YAEAHudRPH3MAQA+53OrMjAYAeHv5nNE/F6IBoCzAze5/31MCQFmAm63zbwEAFAW42f4uwQBQFuBmMCwYAOoC3EzmEgwAZQFuJlNzkgCgLMDNYBcMAHUBbiY/JBgAygLcTOYOogGgLMDN2nwzAOhrpdkZL7L365HxIpttIRuo9yNfZzjeDwBe7JK9+8xWFAiiAKyAgOQgAiIoIiIKCGLvf2vTOjNncjz6HuF+Oyj/XIvuruLvuAfrIXcfWv2jRP5MEr8Q2J8xFz9gf0YRv0jlT/SPKvdhZd3Z3B1PYRnejzoSwISwSwyoBAD4VcaGVGBRR6peUlftThIpxXyYfUS6YPYwNSlDvNOo3ZKqaQE5LSSgFalI5i4EMCGsjggGgLGjiaSu1+vV7XZrq6pKaGzJPiVQmylFBoEWsqEVKbQymZZIK81oxbTwORL5HQKYMnfWBABgDGjQ2qrKBIEVRVGx3S53u10qSdLpdLrn7IKMES2c1i9Ikrzb6dttHUVxEISqilB+eQBTiyaaAAAM0p5h4rJ027a6h22aeorimOY4o/avmaagKGlKE7lq27KMGXwqfVEAUwu/xMNgAOg7zrbvt4rjqCi2SaL5vuc4xmYz7cgJbU/RQ+XNxnEkX06SojjGFsPYNrrjz8gTSNjTAAD9E4brKHKzLEkusux7nnM6EXit08nzUrlJqsyN4nDsW/bIUwhVOAEA6DB+btPEDeK6ru4vfURBMIzTUK5I9dHUNBxBuL+Gqo/BOjzMx/dCmTyJoccTAIBO4dUwjm/u9nrVtFTyDINARxms5GuXa+FGsTqaMRPkaUw5H9//FwDoEp7bqweGyY9FpWuaogisY5o4xO2Vqcmyiq/p1TFnQnXYbTF5Jr8Y+xd9AHhznM1Y8e3Wtsku9T0HXe5wmI7o7/TWvVnMIMOFPJeA4RwA8Gq00bUP6zxv26bxRUVwThsCQ3ZyBM9vqjYPDntuOLeoybMttHICAPBs/JwJorLIqkRLRcEhME6CmCZVVsbBAF7fkOebidlojtAB4JU4zrZXqyy7XHzfUxxjgfNceJiZhiL6l8pdhfv+HhOTb+BONAC8M54L13FUu5Uuy4qCORjwpyhW5F3l5ta6f0FMXsRM3f79GADwTnhurlql2+qNLImCg3GP8K9OjpieddoRz/tzRkxeh62wqgEAfo2zwyAub1WlaZ4wxedleILZYurJSXuLg0P3m0DySptz3Z+/IgDwJnieCcr6qp9lyRMMTKKCl5gainTWs5LpcgiRFxOqYAIAI8dzByaI8rZqNOm+JBfNLryN2XQjaXqWB2EX+2HycqZcdLFwAHg9bh0fs2Wj+ZLimATgvZisdL5kx45d1CJvgb1YXf4KAABPNLeZ9SrPqovsG4aJZhe6Y2Ya4rlyV+uOzNUibyTNsC8JYNBCKy+yZCdLnoG5VNBpG0/etbWlTv5RXwOYkFOTYz4HwLDsbSaw3ExvUoU94e0Q9IppKGfdtRibn/yl/gYwJeqrCQD0HnewVkWrN2dRweoD6DlDkZMsD7jJn/U6gAkxJXyKBugnbn9grFt2bVJFcDa4UgVDMj0J0iVbhfvfdsM9D2BqqtUdOf8GgL9gB1adLS+NpGABAgzcVJGT9hj8KoX7H8AU25TIYIAO43lbDVe3ZdKIHos7VTAqM0NJE9dS55PvDSKAKfaK42CAzuHUYHXcLi9yyiJ1Ydw2nnZ1Y3XylaEEMCGmeO3Ym2iAkeLmNhMV2935PhvSxMNdgM82gqQto8/N8HAC+E5aYm0hwHuZH9arsrjqsiRgIjPAr82E87WODwMLYEI20rLTs7IBhobn5oe43iZa6gkOghfg75vh3Taa8wMKYGrmZxa+RQO8FmczVlQvr2ffW2DxH8B/WkjNMg/mgwlgypSuWJoE8IG9+8BSEwoDKGxAKYKAjDQBG8WCjH3/W4uYepI5SSaZJD653ybuee1/f4PyFK/2x0XVN2We7gJvwgmN4ypRHiTAVyPtOGZUJfBmx7tuHfiHSnMYEAn8De/k4ljHg4cIcEPL1uxFA38iGa9mR6voc7wL/AMb0zgG6UME+HLpeYta6gB4jby5zrw8LvqmM+R8F/jHpnLl10kufIAbsjWjwcAvyKV1MNsdCk1lagbwfzma5a9L4QN8tQl9lwNh4CVKniYfnhF5zobzXeB+jJxwMXNLRewAN8LFuewA+KSMJ1vftorQ4zozcL/UYhfEgge4mYhdzBK9A7RYNy+T+d5vplU5U+5VAWKYypY/SbsCB/imn50HHaBtlMF8vX+2rSjkD0BATNMo28aKyAG+XHpyNItZCKMNuvlAmuz9zApVecr5LiC8jWrM5gNF2ADfhItt0gEeVC65q/0pO0SqcwHwYBzD3icCB/jK0ew1//jjgSj6QFpvZwujr3qbC4AH5oTWNs6FDXBjU/kTIgzB6cn82t2sivgFEGgVr/JXpbABvnpnGieXI2EIp6vn7nprZ1E/9KaMqwJaSu3bq1IRNMCNnmxt51yOhgi6qTSu9/ai0uQe2QVw1Yuys9sVNMCNoWmdxvzdgDuldFM3WNpWoaky15kBfGujCRzgRk82ZpO0A9wJ5Smdj1ezZlwVvyIA+CHBA3yjGnbNdjT+K0WP6+A5s/qh+o7uAmhLgK960zDbu1yPxj+l6GXsfnhGtJnSXQCtDPDNKKyeJ/yhhL8vl+rzKVsUmjnkeBcAAb4ZOX07iNmQxtvLB0k8354yI/KcKfeZARDgF/TMyt4zuBJvI00mwTI7GJq5oboACPBP9TZqdVpLDOzAb57uSvE6sHeGpvLpPYAbAvwqU+3g11IH+DW5NK4DP7MKTZ5eAOBrBPjVep7ZrIW5nYWXKd1BKc1XJ7uKTNkbss0M4GUE+Df1QuMYjHmohM+eJLc++8dFEfETEYBfQID/xFDVDstxycFwayl6Xpbr82l30ELV41IVgFcgwH9uZBr2diIxRro99DSe1Mtl83JX5UYVgPvQxgDfjLywsAP3iQw/LF1/Ssfnpb2L+qbsMJgZwJ1pbYA/GoaWHUwSNqUfhZ4n8WQVPNuWYfL7H4B71vYAf1oNRzu/jnWlAxEpXV2a19ujXRSh6TlsMgMQAQH+orcJredgHZdsSwug203T+fx8W+uG3jt2mAGIhgB/xzH7VbZcSSyH37N3b9tpAmEYhisjCoiITGYUGAK4QbYdQL3/WyvYlYOa1ZW0TY3B77kCzt71AzP/HZpMFD+tedsUhkHIaHQGAPiqEODfUEehNpPHLBYJSvyZJpMkcZwsOx5l42osxKwLAAOBAL9BZVPXWvDUCb7BDVHhXSZdy3Wn0+XyDAAwNAjwuwdiWyvk4eSJANdp/Q+UKsLxssNBStcldr7EpAsAw4YA/6mQmDNL8jITWPLwr3RFZFkUtXIzm5mmjfUHAPBIEOC/9RTmRNvL7erkCIVi1cM76DuqKL7jrVbtVu73hLA8fMKZIQB4UAjwB1BtUyusxfcy9XCG6Vc0UTwvLcvFYlsUhmba9hkAABDgj6Yuc0ZMo5AtP1VCJIn+SHd76LqeJIkQ4nRatW0fXNMkzF5iwR8AAAJ8W4xpxqxpOF/VaRwrdGB/b1FKlTj26rrmnDdNYxgGY+wMAAAI8P1Qw5ARsl4blrXlvKwqJwgSSul4fO+vrMcdSuk8CAJRVVXJObcsa79erwkhLAxxQggAAAH+YlRCiOu6hZSSR1FUp2ka+74vdp2bZ3nXC/xOnHZWUWcrpSy6JzQIIfh2CwCAAA+VqqqhbdvM7Bk9a9Pj0UX5/EKZX6H6FTq/5j+/qKKf+ObCMi7MHrE7oapiixAAwCsIMLyWT6/kZwAAuG8IMAAAwNsQYAAAgCFAgAEAfrRXxzQAwwAQxFr+pAPht0Q62SQMm4ABoEDAALAJGAAKBAwAm4ABoEDAALAJGAAKBAwAm4ABoEDAALAJGAAKBAwAm4ABoEDAAPDA9wMA1x2ol0oZx5MgUQAAAABJRU5ErkJggg=="
+                                    alt="no internet connection"></div>
+                        </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="javascript/jquery-3.2.1.min.js"></script>
+    <script src="javascript/popper.min.js"></script>
+    <script src="javascript/bootstrap.min.js"></script>
+    <script src="javascript/tags.js"></script>
+    <script>
+    (function () {
+        var p = location.pathname.split('/').pop() || 'index.html';
+        document.querySelectorAll('.header-option a').forEach(function (a) {
+            var h = a.getAttribute('href');
+            if (h === p || (p === '' && h === 'index.html')) {
+                a.parentElement.classList.add('selected-header-option');
+            }
+        });
+    })();
+    </script>
+
+    <script>
+    (function () {
+        // Recent Publications: restore BIB toggle only.
+        // PDF / Project have no real target URLs in the static export,
+        // so they stay inert (click does nothing) until real links are added.
+        document.querySelectorAll('.publication-content').forEach(function (item) {
+            var bib = item.querySelector('.link-ico.bib-link');
+            if (!bib) return;
+            bib.setAttribute('href', 'javascript:void(0)');
+            bib.addEventListener('click', function (e) {
+                e.preventDefault();
+                var code = item.querySelector('.code');
+                if (!code) return;
+                var hidden = code.style.display === 'none' || code.style.display === '';
+                code.style.display = hidden ? 'block' : 'none';
+                bib.textContent = hidden ? 'HIDE' : 'BIB';
+            });
+        });
+    })();
+    </script>
+</body>
+</html>
